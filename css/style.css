@@ -1,0 +1,229 @@
+body {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color: white;
+    background-color: black;
+}
+
+
+
+/* CSS Menu */
+header {
+    height: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+}
+
+#pesquisa {
+    height: 18px;
+    filter: invert(100%);
+    margin-right: 15px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    height: 70px;
+    align-items: center;
+}
+
+#menu a {
+    height: 100%;
+    align-content: center;
+    padding: 15px;
+}
+
+#menu a:hover {
+    box-shadow: inset 0 -1px 0 0 #6d2ce9;
+
+}
+
+#usuario {
+    border: 2px solid #7c2bf5;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px 1px #7c2bf5;
+
+    text-align: center;
+    font-size: 14px;
+
+}
+
+#userimg {
+    height: 14px;
+    filter: invert(100%) drop-shadow(0px 0px 2px #7c2bf5);
+    margin-right: 5px;
+}
+
+#logo {
+    height: 70px;
+}
+
+a,
+a::after {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #6d2ce9;
+    text-decoration: none;
+}
+
+
+
+/* CSS Banner */
+
+banner {
+    display: flex;
+    justify-content: space-around;
+    background-image: url('../img/bannerhome.png');
+    width: 100%;
+    align-items: flex-end;
+    height: 360px;
+
+    /* Animação Background */
+    animation-name: panBackground;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    /* roda apenas 1 vez */
+    animation-fill-mode: forwards;
+    /* Trava animação no último frame */
+}
+
+
+/* Codigo keyframes faz a animação da imagem de fundo */
+@keyframes panBackground {
+    from {
+        background-position: top;
+    }
+
+    to {
+        background-position: center;
+        /* Match with image width for flawless loop */
+    }
+}
+
+.bantext {
+    padding-bottom: 20px;
+    background-color: black;
+    box-shadow: 0 20px 20px 16px black;
+    height: 100%;
+    position: relative;
+    align-content: flex-end;
+}
+
+#pers_banner {
+    height: 350px;
+}
+
+.btn_outglow {
+    border: 2px solid #7c2bf5;
+    border-radius: 10px;
+    padding: 14px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px 1px #7c2bf5;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn_purp {
+    background-color: #baa5e0;
+    box-shadow: inset 0 0 40px 10px #7c2bf5;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #7c2bf5;
+    border-radius: 10px;
+    padding: 14px;
+    margin-right: 15px;
+}
+
+h1 {
+    font-family: "Tektur", sans-serif;
+    font-size: 50px;
+}
+
+c {
+    font-weight: 300;
+    color: #7c2bf5;
+}
+
+
+
+/* Lançamentos */
+
+#lancamentos {
+    margin-top: 20px;
+}
+
+.sml-title {
+    display: flex;
+    margin-right: 10px;
+    align-items: flex-start;
+}
+
+.sml-title h4 {
+    font-family: "Tektur", sans-serif;
+    font-size: 25px;
+}
+
+.sml-title img {
+    height: 25px;
+    filter: hue-rotate(254deg);
+}
+
+/* Cards */
+
+.card {
+    background-color: black;
+    border: 1px solid #c9a5ff;
+    border-radius: 20px 10px;
+    corner-shape: bevel;
+}
+
+.card-img-top {
+    border-radius: 20px 10px 0 0;
+    corner-shape: bevel;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+
+}
+.card-body{
+    margin-top:-75px;
+    box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+.card-body span{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #7c2bf5;
+    font-size: 12px;
+}
+.card-title {
+    font-family: "Tektur", sans-serif;
+    font-size: 20px;
+}
+.card-text{
+    font-size: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card-rating-plat img{
+    height:15px;
+}
+.card-rating-plat{
+    filter: grayscale(100%) invert(100%) ;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px
+}
+.card-rating-plat span{
+    filter: none;
+    padding-left: 8px;
+    color: black;
+}

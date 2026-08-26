@@ -1,27 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <h1>GameZone</h1>
+        Gamezone - Seu Universo Gamer
     </title>
+
+
+    <!--importando o Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Fim importacao Bootstrap-->
+
+    <!-- Importando Font google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- fim importacao google fonts-->
+
+    <!-- Importando o CSS da pagina -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Fim importacao css -->
 </head>
 
+<!--inicio Body-->
+
 <body>
-    <section><img src="" alt="Logo">
+
+    <!-- Inicio Menu Header-->
+
+    <header>
+        <a href="index"><img src="img/logo.jpg" alt="Logo" id="logo"></a>
+        <div id="menu">
+            <a href="pages/jogos.html">Jogos</a>
+            <a href="pages/noticias.html">Notícias</a>
+            <a href="pages/comunidade.html">Comunidade</a>
+            <a href="pages/sobre.html">sobre</a>
+        </div>
         <div>
-            <a href="index">Home</a>
-            <a href="">Jogos</a>
-            <a href="">Notícias</a>
-            <a href="">Comunidade</a>
-            <a href="">sobre</a>
+            <a href="pages/pesquisa.html"><img src="img/search.png" alt="pequisa" id="pesquisa"></a>
+            <a href="pages/usuario" id="usuario"><img src="img/user.png" alt="user" id="userimg"> Usuário</a>
         </div>
-        <div><img src="" alt="lupa">
-            <div>Usuário</div>
+
+    </header>
+
+    <!-- Fim Menu Header-->
+
+    <!-- Inicio Banner -->
+    <banner>
+        <div class="col-4 bantext">
+            <c>Bem vindo à</c>
+            <h1>Game<c>zone.</c>
+            </h1>
+            <h2>
+                <c>Explore.</c> jogue. Conecte-se.
+            </h2>
+            <p>O seu destino definitivo para descobrir os melhores jogos, notícias e uma comundade apaixonada por games.
+            </p>
+            <div>
+                <a href="pages/jogos.html" class="btn_purp col-5">Explorar Jogos ></a>
+                <a href="pages/sobre.html" class="btn_outglow col-4">Saiba Mais</a>
+            </div>
         </div>
-    </section>
+        <div>
+            <img src="img/personagem_banner.png" alt="personagem" id="pers_banner">
+        </div>
+    </banner>
+
+    <!-- Fim Banner -->
+
+
+
+    <!-- Inicio Lançamentos -->
+
+    <div id="lancamentos">
+        <div class="sml-title col-3">
+            <div><img src="img/fire.png" alt="foguinho"></div>
+            <div><h4>Lançamentos</h4></div>
+        </div>
+        <div class="col-12 carousel">
+            <div class="card" style="width: 14rem;">
+                <img class="card-img-top" src="img/hwleg.jpg" alt="Hogwarts Legacy">
+                <div class="card-body">
+                    <span class="badge badge-secondary">RPG</span>
+                    <h5 class="card-title">Hogwarts Legacy</h5>
+                    <p class="card-text">Um RPG de ação e mundo aberto ambientado no mundo de Harry Potter.</p>
+                </div>
+                <div class="card-rating-plat">
+                    <div>
+                        <img src="img/star.png" alt="estrelas" style="filter:grayscale(0%)"><span>4.8</span>
+                    </div>
+                    <div>
+                        <img src="img/win-plat-logo.png" alt="plataforma" >
+                        <img src="img/ps-plat-logo.png" alt="plataforma" >
+                        <img src="img/sw-plat-logo.png" alt="plataforma" >
+                        <img src="img/xbox-plat-logo.png" alt="plataforma" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim Lançamentos -->
+
 </body>
 
 </html>
