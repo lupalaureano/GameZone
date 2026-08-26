@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade | GameZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/community.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="../index.html">
+                <i class="bi bi-controller me-1"></i>GameZone
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="community.html">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-lg-3 mb-3 mb-lg-0" role="search" action="#">
+                    <input class="form-control me-2" type="search" placeholder="Buscar na comunidade"
+                        aria-label="Buscar na comunidade">
+                    <button class="btn btn-outline-secondary" type="button" aria-label="Buscar">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-person-circle fs-4 me-2 text-secondary"></i>
+                    <span>Usuário</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="community-hero bg-light border-bottom">
+        <div class="container">
+            <h1 class="h2 mb-2">Comunidade GameZone</h1>
+            <p class="text-secondary mb-4">Fóruns, grupos e enquetes para falar de jogos com outros jogadores.</p>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-number">128</div>
+                            <div class="text-secondary">tópicos no fórum</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-number">14</div>
+                            <div class="text-secondary">grupos ativos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-number">6</div>
+                            <div class="text-secondary">enquetes da semana</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <ul class="nav nav-tabs mb-4" id="abasComunidade" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="aba-foruns" data-bs-toggle="tab" data-bs-target="#painel-foruns"
+                    type="button" role="tab" aria-controls="painel-foruns" aria-selected="true">
+                    <i class="bi bi-chat-dots me-1"></i>Fóruns
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="aba-grupos" data-bs-toggle="tab" data-bs-target="#painel-grupos"
+                    type="button" role="tab" aria-controls="painel-grupos" aria-selected="false">
+                    <i class="bi bi-people me-1"></i>Grupos
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="aba-enquetes" data-bs-toggle="tab" data-bs-target="#painel-enquetes"
+                    type="button" role="tab" aria-controls="painel-enquetes" aria-selected="false">
+                    <i class="bi bi-bar-chart me-1"></i>Enquetes
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="conteudoComunidade">
+            <section class="tab-pane fade show active" id="painel-foruns" role="tabpanel" aria-labelledby="aba-foruns"
+                tabindex="0">
+                <div class="mb-3">
+                    <span class="badge rounded-pill text-bg-primary">Todos</span>
+                    <span class="badge rounded-pill text-bg-light text-dark border">Geral</span>
+                    <span class="badge rounded-pill text-bg-light text-dark border">FPS</span>
+                    <span class="badge rounded-pill text-bg-light text-dark border">RPG</span>
+                    <span class="badge rounded-pill text-bg-light text-dark border">Indie</span>
+                </div>
+
+                <div class="accordion" id="accordionForuns">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topico1" aria-expanded="true" aria-controls="topico1">
+                                <span class="d-flex flex-column flex-md-row align-items-md-center w-100 gap-2 pe-3">
+                                    <span class="fw-semibold">Melhor RPG de 2024?</span>
+                                    <span class="d-flex flex-wrap gap-2 topic-meta">
+                                        <span class="badge text-bg-secondary">RPG</span>
+                                        <span>NovaPixel</span>
+                                        <span>há 2 horas</span>
+                                        <span>12 respostas</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="topico1" class="accordion-collapse collapse show" data-bs-parent="#accordionForuns">
+                            <div class="accordion-body">
+                                <p>Pessoal, entre Baldur's Gate 3 e Elden Ring (Shadow of the Erdtree), qual vocês
+                                    consideram o RPG do ano? Quero montar uma lista pra maratona de férias.</p>
+                                <hr>
+                                <h3 class="h6 mb-3">Comentários</h3>
+
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-primary">KF</div>
+                                    <div>
+                                        <div class="fw-semibold">KaitoFPS <small class="text-muted">há 1 hora</small>
+                                        </div>
+                                        <p class="mb-0">Baldur's Gate 3. A liberdade de build e as conversas ainda não
+                                            foram superadas.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-success">MQ</div>
+                                    <div>
+                                        <div class="fw-semibold">MiraQ <small class="text-muted">há 45 min</small></div>
+                                        <p class="mb-0">Sou time Elden Ring. O DLC sozinho já justificaria o título.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-danger">LS</div>
+                                    <div>
+                                        <div class="fw-semibold">LunaSave <small class="text-muted">há 30 min</small>
+                                        </div>
+                                        <p class="mb-0">Depende do estilo. Se curte combate de ação, Elden. Se curte
+                                            história ramificada, BG3.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-warning text-dark">RX</div>
+                                    <div>
+                                        <div class="fw-semibold">RivenX <small class="text-muted">há 18 min</small>
+                                        </div>
+                                        <p class="mb-0">Ninguém vai falar de Metaphor: ReFantazio? Merecia estar nessa
+                                            briga.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-4">
+                                    <div class="avatar bg-info">NP</div>
+                                    <div>
+                                        <div class="fw-semibold">NovaPixel <small class="text-muted">há 10 min</small>
+                                        </div>
+                                        <p class="mb-0">Boa, vou colocar Metaphor na lista também. Valeu!</p>
+                                    </div>
+                                </div>
+
+                                <form class="comment-form" action="#">
+                                    <label for="comentarioTopico1" class="form-label">Responder ao tópico</label>
+                                    <textarea class="form-control mb-2" id="comentarioTopico1"
+                                        placeholder="Escreva um comentário..."></textarea>
+                                    <button class="btn btn-primary" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topico2" aria-expanded="false" aria-controls="topico2">
+                                <span class="d-flex flex-column flex-md-row align-items-md-center w-100 gap-2 pe-3">
+                                    <span class="fw-semibold">Dicas para iniciantes em Valorant</span>
+                                    <span class="d-flex flex-wrap gap-2 topic-meta">
+                                        <span class="badge text-bg-danger">FPS</span>
+                                        <span>KaitoFPS</span>
+                                        <span>há 5 horas</span>
+                                        <span>8 respostas</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="topico2" class="accordion-collapse collapse" data-bs-parent="#accordionForuns">
+                            <div class="accordion-body">
+                                <p>Comecei ontem e estou morrendo muito. Quais agentes e mapas vocês recomendam para
+                                    quem está no ferro?</p>
+                                <hr>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-success">MQ</div>
+                                    <div>
+                                        <div class="fw-semibold">MiraQ <small class="text-muted">há 4 horas</small>
+                                        </div>
+                                        <p class="mb-0">Sage ou Sova. Joga deathmatch antes da fila ranqueada.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-primary">NP</div>
+                                    <div>
+                                        <div class="fw-semibold">NovaPixel <small class="text-muted">há 3 horas</small>
+                                        </div>
+                                        <p class="mb-0">Som e crosshair importam mais do que skin. Treina o spray no
+                                            range.</p>
+                                    </div>
+                                </div>
+                                <form class="comment-form" action="#">
+                                    <label for="comentarioTopico2" class="form-label">Responder ao tópico</label>
+                                    <textarea class="form-control mb-2" id="comentarioTopico2"
+                                        placeholder="Escreva um comentário..."></textarea>
+                                    <button class="btn btn-primary" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topico3" aria-expanded="false" aria-controls="topico3">
+                                <span class="d-flex flex-column flex-md-row align-items-md-center w-100 gap-2 pe-3">
+                                    <span class="fw-semibold">Indie que vale a pena no Game Pass</span>
+                                    <span class="d-flex flex-wrap gap-2 topic-meta">
+                                        <span class="badge text-bg-success">Indie</span>
+                                        <span>LunaSave</span>
+                                        <span>ontem</span>
+                                        <span>6 respostas</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="topico3" class="accordion-collapse collapse" data-bs-parent="#accordionForuns">
+                            <div class="accordion-body">
+                                <p>Quero gastar pouco tempo e sair impressionado. Qual indie do catálogo vocês
+                                    indicam neste mês?</p>
+                                <hr>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-info">RX</div>
+                                    <div>
+                                        <div class="fw-semibold">RivenX <small class="text-muted">ontem</small></div>
+                                        <p class="mb-0">Sea of Stars se você curte JRPG clássico. Curto e bonito.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-primary">NP</div>
+                                    <div>
+                                        <div class="fw-semibold">NovaPixel <small class="text-muted">há 20 horas</small>
+                                        </div>
+                                        <p class="mb-0">Animal Well. Sem spoiler: vai fundo.</p>
+                                    </div>
+                                </div>
+                                <form class="comment-form" action="#">
+                                    <label for="comentarioTopico3" class="form-label">Responder ao tópico</label>
+                                    <textarea class="form-control mb-2" id="comentarioTopico3"
+                                        placeholder="Escreva um comentário..."></textarea>
+                                    <button class="btn btn-primary" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topico4" aria-expanded="false" aria-controls="topico4">
+                                <span class="d-flex flex-column flex-md-row align-items-md-center w-100 gap-2 pe-3">
+                                    <span class="fw-semibold">Patch do CS2 estragou o spray?</span>
+                                    <span class="d-flex flex-wrap gap-2 topic-meta">
+                                        <span class="badge text-bg-danger">FPS</span>
+                                        <span>MiraQ</span>
+                                        <span>há 2 dias</span>
+                                        <span>15 respostas</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="topico4" class="accordion-collapse collapse" data-bs-parent="#accordionForuns">
+                            <div class="accordion-body">
+                                <p>Depois do último patch a AK parece outro rifle. Alguém mais sentiu o spray mais
+                                    solto no meio do padrão?</p>
+                                <hr>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-danger">KF</div>
+                                    <div>
+                                        <div class="fw-semibold">KaitoFPS <small class="text-muted">há 2 dias</small>
+                                        </div>
+                                        <p class="mb-0">Senti na Dust 2. Burst de 5 tiros está mais seguro que spray
+                                            longo.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-warning text-dark">LS</div>
+                                    <div>
+                                        <div class="fw-semibold">LunaSave <small class="text-muted">há 1 dia</small>
+                                        </div>
+                                        <p class="mb-0">Pode ser placebo. Testei no mapa de treino e o padrão continua
+                                            igual no replay.</p>
+                                    </div>
+                                </div>
+                                <form class="comment-form" action="#">
+                                    <label for="comentarioTopico4" class="form-label">Responder ao tópico</label>
+                                    <textarea class="form-control mb-2" id="comentarioTopico4"
+                                        placeholder="Escreva um comentário..."></textarea>
+                                    <button class="btn btn-primary" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#topico5" aria-expanded="false" aria-controls="topico5">
+                                <span class="d-flex flex-column flex-md-row align-items-md-center w-100 gap-2 pe-3">
+                                    <span class="fw-semibold">Montagem barata para Elden Ring</span>
+                                    <span class="d-flex flex-wrap gap-2 topic-meta">
+                                        <span class="badge text-bg-secondary">RPG</span>
+                                        <span>RivenX</span>
+                                        <span>há 3 dias</span>
+                                        <span>9 respostas</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="topico5" class="accordion-collapse collapse" data-bs-parent="#accordionForuns">
+                            <div class="accordion-body">
+                                <p>Quero rodar no alto a 1080p sem gastar uma fortuna. Sugestões de GPU usada até
+                                    1500 reais?</p>
+                                <hr>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-primary">NP</div>
+                                    <div>
+                                        <div class="fw-semibold">NovaPixel <small class="text-muted">há 3 dias</small>
+                                        </div>
+                                        <p class="mb-0">RX 6600 ainda aparece nesse preço e dá conta no alto.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-3">
+                                    <div class="avatar bg-success">MQ</div>
+                                    <div>
+                                        <div class="fw-semibold">MiraQ <small class="text-muted">há 2 dias</small>
+                                        </div>
+                                        <p class="mb-0">Se achar uma 3060 usada, melhor. Fica de olho no PSU de 500W
+                                            pelo menos.</p>
+                                    </div>
+                                </div>
+                                <form class="comment-form" action="#">
+                                    <label for="comentarioTopico5" class="form-label">Responder ao tópico</label>
+                                    <textarea class="form-control mb-2" id="comentarioTopico5"
+                                        placeholder="Escreva um comentário..."></textarea>
+                                    <button class="btn btn-primary" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="painel-grupos" role="tabpanel" aria-labelledby="aba-grupos" tabindex="0">
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Clã Valorant BR</h2>
+                                    <span class="badge text-bg-danger">Valorant</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">Fila ranqueada à noite, treinos de execute e
+                                    call em português.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>86 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoValorant">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Speedrunners</h2>
+                                    <span class="badge text-bg-warning text-dark">Speedrun</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">Troca de rotas, PB da semana e lives de any%.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>54 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoSpeed">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Coop de fim de semana</h2>
+                                    <span class="badge text-bg-info">Coop</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">It Takes Two, Deep Rock e o que sair de coop
+                                    local ou online.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>42 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoCoop">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Souls-like</h2>
+                                    <span class="badge text-bg-dark">Souls</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">Dicas de boss, builds e recados educados depois
+                                    da décima morte.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>71 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoSouls">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Indie BR</h2>
+                                    <span class="badge text-bg-success">Indie</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">Divulgação de jogos nacionais, playtests e
+                                    feedback de demo.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>39 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoIndie">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card group-card">
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h2 class="h5 mb-0">Retro/Pixel</h2>
+                                    <span class="badge text-bg-secondary">Retro</span>
+                                </div>
+                                <p class="text-secondary flex-grow-1">Pixel art, SNES, emulação e o ranking eterno de
+                                    Castlevania.</p>
+                                <p class="text-secondary mb-3"><i class="bi bi-people me-1"></i>28 membros</p>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrupoRetro">Entrar no grupo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="painel-enquetes" role="tabpanel" aria-labelledby="aba-enquetes"
+                tabindex="0">
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <article class="card poll-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h2 class="h5 mb-0">Jogo mais esperado de 2026</h2>
+                                    <span class="badge text-bg-primary">Aberta</span>
+                                </div>
+                                <p class="text-secondary">Qual lançamento você mais quer jogar no ano que vem?</p>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <legend class="form-label">Sua escolha</legend>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="enquete2026"
+                                                    id="opcaoGta">
+                                                <label class="form-check-label" for="opcaoGta">GTA VI</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="enquete2026"
+                                                    id="opcaoPrag">
+                                                <label class="form-check-label" for="opcaoPrag">Pragmata</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="enquete2026"
+                                                    id="opcaoOutro">
+                                                <label class="form-check-label" for="opcaoOutro">Outro lançamento</label>
+                                            </div>
+                                            <button class="btn btn-primary" type="button">Votar</button>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="form-label mb-2">Resultado parcial</p>
+                                        <label class="form-label mb-1" for="barraGta">GTA VI — 42%</label>
+                                        <div class="progress mb-2" role="progressbar" aria-label="GTA VI 42 por cento"
+                                            aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" id="barraGta" style="width: 42%">42%</div>
+                                        </div>
+                                        <label class="form-label mb-1" for="barraPrag">Pragmata — 31%</label>
+                                        <div class="progress mb-2" role="progressbar"
+                                            aria-label="Pragmata 31 por cento" aria-valuenow="31" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                            <div class="progress-bar" id="barraPrag" style="width: 31%">31%</div>
+                                        </div>
+                                        <label class="form-label mb-1" for="barraOutro">Outro — 27%</label>
+                                        <div class="progress" role="progressbar" aria-label="Outro 27 por cento"
+                                            aria-valuenow="27" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" id="barraOutro" style="width: 27%">27%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <article class="card poll-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h2 class="h5 mb-0">PC ou console?</h2>
+                                    <span class="badge text-bg-secondary">Encerrada</span>
+                                </div>
+                                <p class="text-secondary">Onde a comunidade GameZone mais joga hoje.</p>
+                                <label class="form-label mb-1" for="barraPc">PC — 58%</label>
+                                <div class="progress mb-2" role="progressbar" aria-label="PC 58 por cento"
+                                    aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success" id="barraPc" style="width: 58%">58%</div>
+                                </div>
+                                <label class="form-label mb-1" for="barraConsole">Console — 34%</label>
+                                <div class="progress mb-2" role="progressbar" aria-label="Console 34 por cento"
+                                    aria-valuenow="34" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success" id="barraConsole" style="width: 34%">34%</div>
+                                </div>
+                                <label class="form-label mb-1" for="barraMobile">Mobile — 8%</label>
+                                <div class="progress" role="progressbar" aria-label="Mobile 8 por cento"
+                                    aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-success" id="barraMobile" style="width: 8%">8%</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <article class="card poll-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h2 class="h5 mb-0">Jogo competitivo favorito</h2>
+                                    <span class="badge text-bg-secondary">Encerrada</span>
+                                </div>
+                                <p class="text-secondary">Qual título competitivo a galera mais joga no momento.</p>
+                                <label class="form-label mb-1" for="barraValorant">Valorant — 37%</label>
+                                <div class="progress mb-2" role="progressbar" aria-label="Valorant 37 por cento"
+                                    aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info" id="barraValorant" style="width: 37%">37%</div>
+                                </div>
+                                <label class="form-label mb-1" for="barraCs">Counter-Strike 2 — 33%</label>
+                                <div class="progress mb-2" role="progressbar" aria-label="CS2 33 por cento"
+                                    aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info" id="barraCs" style="width: 33%">33%</div>
+                                </div>
+                                <label class="form-label mb-1" for="barraLol">League of Legends — 30%</label>
+                                <div class="progress" role="progressbar" aria-label="League of Legends 30 por cento"
+                                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar bg-info" id="barraLol" style="width: 30%">30%</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalGrupoValorant" tabindex="-1" aria-labelledby="tituloModalValorant"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalValorant">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Clã Valorant BR.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalGrupoSpeed" tabindex="-1" aria-labelledby="tituloModalSpeed" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalSpeed">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Speedrunners.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalGrupoCoop" tabindex="-1" aria-labelledby="tituloModalCoop" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalCoop">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Coop de fim de semana.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalGrupoSouls" tabindex="-1" aria-labelledby="tituloModalSouls" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalSouls">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Souls-like.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalGrupoIndie" tabindex="-1" aria-labelledby="tituloModalIndie" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalIndie">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Indie BR.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalGrupoRetro" tabindex="-1" aria-labelledby="tituloModalRetro" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalRetro">Grupo</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">Você entrou no grupo Retro/Pixel.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
