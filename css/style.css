@@ -157,11 +157,10 @@ c {
 }
 
 
-
 /* Lançamentos */
 
 #lancamentos {
-    margin-top: 20px;
+    justify-self: center;
 }
 
 .sml-title {
@@ -182,48 +181,257 @@ c {
 
 /* Cards */
 
-.card {
+.card-home {
     background-color: black;
     border: 1px solid #c9a5ff;
     border-radius: 20px 10px;
     corner-shape: bevel;
+    margin: 0 1em;
 }
 
-.card-img-top {
+.card-img-top-home {
     border-radius: 20px 10px 0 0;
     corner-shape: bevel;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 
 }
-.card-body{
-    margin-top:-75px;
+
+.card-body-home {
+    margin-top: -75px;
     box-shadow: inset 0 -1px 0 0 #6d2ce9;
 }
-.card-body span{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.card-body-home span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #7c2bf5;
     font-size: 12px;
 }
-.card-title {
+
+.card-title-home {
     font-family: "Tektur", sans-serif;
     font-size: 20px;
 }
-.card-text{
+
+.card-text-home {
     font-size: 10px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.card-rating-plat img{
-    height:15px;
+
+.card-rating-plat img {
+    height: 15px;
 }
-.card-rating-plat{
-    filter: grayscale(100%) invert(100%) ;
+
+.card-rating-plat {
+    filter: grayscale(100%) invert(100%);
     display: flex;
     justify-content: space-between;
     padding: 5px 15px
 }
-.card-rating-plat span{
+
+.card-rating-plat span {
     filter: none;
     padding-left: 8px;
     color: black;
+}
+
+.carousel-control-next-home,
+.carousel-control-prev-home {
+    background: none !important;
+    border: none;
+    justify-content: space-between;
+    opacity: .2;
+}
+
+.carousel-control-next-home {
+    justify-content: flex-end;
+}
+
+.carousel-control-prev-icon-home,
+.carousel-control-next-icon-home {
+    padding: 20px 10px;
+    border: 2px solid;
+    background-size: 20px;
+    border-radius: 3px;
+}
+
+@media screen and (min-width:576px) {
+    .carousel-inner-home {
+        display: flex;
+    }
+
+    .carousel-item-home {
+        display: block;
+        margin: 0;
+        flex: 0 0 calc(100% / 4);
+    }
+
+    .img-wraper {
+        max-width: 100%;
+        height: 25vw;
+    }
+
+    #lancamentos {
+        margin: 20px 150px;
+    }
+}
+
+.carousel-inner-home {
+    padding: 1em;
+}
+
+.img-wraper {
+    max-width: 100%;
+    height: 100%;
+    max-height: 320px;
+}
+
+.img-wraper img {
+    height: 100%;
+}
+
+/* Fim Carousel */
+
+/*Inicio Proximo Jogo */
+#proximoJogo {
+    text-align: center;
+    font-family: "Tektur", sans-serif;
+    border-radius: 55px 4px 55px 4px;
+    corner-shape: bevel;
+    border: 1px solid #233571;
+    box-shadow: inset 0px 0px 60px 0px #233571a8;
+    margin: 10px 150px;
+    padding: 20px;
+    background-color: #020913;
+}
+
+#proximoJogo h3 {
+
+    font-size: 25px;
+}
+
+#proximoJogo span {
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tipojogo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tipojogo img {
+    max-height: 50px;
+    width: 50px;
+    filter: invert(100%) drop-shadow(0px 0px 5px #7c2bf5);
+}
+
+.minicard {
+    margin: 15px;
+    padding: 8px 20px;
+    border: 1px solid #7c2bf5;
+    border-radius: 5px 5px 3px 3px;
+    corner-shape: bevel;
+    box-shadow: 0 0 5px 0px #7c2bf5;
+    background: none;
+    color: white;
+}
+
+.minicard h4 {
+    font-size: .6em;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* Fim Proximo Jogo */
+
+/*Inicio Estatisticas */
+#estatisticas {
+    font-family: "Tektur", sans-serif;
+    border-radius: 55px 4px 55px 4px;
+    corner-shape: bevel;
+    border: 1px solid #233571;
+    box-shadow: inset 0px 0px 60px 0px #233571a8;
+    margin: 30px 150px;
+    padding: 20px;
+    background-color: #020913;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-sts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-sts img {
+    height: 70px;
+    margin: 10px;
+    filter: invert(100%) drop-shadow(0px 0px 8px #7c2bf5);
+}
+
+.borda {
+    box-shadow: -1px 0 0px .5px #6d2ce9;
+    height: 65px;
+    align-self: center;
+
+}
+
+
+/* Fim Estatisticas */
+
+/*Inicio Footer */
+
+footer {
+    display: flex;
+    background-color: #020913;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+footer img {
+    max-width: 250px;
+}
+
+#social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.img {
+    height: 20px;
+    filter: invert(100%);
+}
+
+#email{
+    margin-top: 20px;
+    background-color: #020913;
+    box-shadow: 0 0 10px 1px #7c2bf5;
+    border: none; 
+    
+}
+
+#send{
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 0 0 30px 0px #7c2bf5;
+    
+    
+}
+
+#send img{
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -2px;
+    top: 1px;;
 }
