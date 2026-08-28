@@ -219,7 +219,7 @@ c {
 }
 
 .card-rating-plat img {
-    height: 15px;
+    height: 15px !important;
 }
 
 .card-rating-plat {
@@ -287,8 +287,8 @@ c {
     max-height: 320px;
 }
 
-.img-wraper img {
-    height: 100%;
+.img-wraper .img-home {
+    height: 100% !important;
 }
 
 /* Fim Carousel */
