@@ -440,18 +440,9 @@ footer img {
 /*Fim Footer*/
 
 /* ===== ver como pode padronizar as img em um tamanho bom ===== */
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
-}
 
 .carousel-item img {
-    height: 500px;
-    object-fit: cover;
-}
-
-.carousel-item img {
-    height: 500px;
+    max-height: 500px;
     object-fit: cover;
     object-position: top;
 
