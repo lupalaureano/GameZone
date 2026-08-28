@@ -235,6 +235,7 @@ c {
     color: black;
 }
 
+
 .carousel-control-next-home,
 .carousel-control-prev-home {
     background: none !important;
@@ -434,4 +435,24 @@ footer img {
     position: relative;
     left: -2px;
     top: 1px;;
+}
+
+/*Fim Footer*/
+
+/* ===== ver como pode padronizar as img em um tamanho bom ===== */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+
 }
