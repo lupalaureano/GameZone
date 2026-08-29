@@ -66,17 +66,32 @@
 
     <!-- Fim Importação Jquery-->
 
-    <header>
-        <a href="index"><img src="img/logo.jpg" alt="Logo" id="logo"></a>
-        <div id="menu">
-            <a href="pages/jogos.html">Jogos</a>
-            <a href="pages/noticias.html">Notícias</a>
-            <a href="pages/comunidade.html">Comunidade</a>
-            <a href="pages/sobre.html">sobre</a>
-        </div>
-        <div>
-            <a href="pages/pesquisa.html"><img src="img/search.png" alt="pequisa" id="pesquisa"></a>
-            <a href="pages/usuario" id="usuario"><img src="img/user.png" alt="user" id="userimg"> Usuário</a>
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="index" class="navbar-brand"><img src="img/logo.jpg" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                <a href="pages/jogos.html" class="nav-link">Jogos</a>
+                    </li> <li class="nav-item">
+                <a href="pages/noticias.html" class="nav-link">Notícias</a>
+                </li> <li class="nav-item">
+                <a href="pages/comunidade.html" class="nav-link">Comunidade</a>
+                </li> <li class="nav-item">
+                <a href="pages/sobre.html" class="nav-link">sobre</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="pages/pesquisa.html" id="pesquisa"><img src="img/search.png" alt="pequisa" ></a>
+                <a href="pages/usuario" id="usuario"><img src="img/user.png" alt="user" id="userimg"> Usuário</a>
+            </div>
+            </div>
+            
         </div>
 
     </header>
@@ -85,7 +100,7 @@
 
     <!-- Inicio Banner -->
     <banner>
-        <div class="col-4 bantext">
+        <div class="col-lg-4 col-sm-6 bantext">
             <c>Bem vindo à</c>
             <h1>Game<c>zone.</c>
             </h1>
@@ -204,13 +219,13 @@
                     <div class="carousel-item carousel-item-home">
                         <div class="card card-home">
                             <div class="img-wraper">
-                                <img class="card-img-top card-img-top-home img-home" src="img/for6.png"
-                                    alt="Forza 6">
+                                <img class="card-img-top card-img-top-home img-home" src="img/for6.png" alt="Forza 6">
                             </div>
                             <div class="card-body card-body-home">
                                 <span class="badge badge-secondary">corrida</span>
                                 <h5 class="card-title card-title-home">Forza 6</h5>
-                                <p class="card-text card-text-home">um jogo de corrida em mundo aberto ambientado no Japão.
+                                <p class="card-text card-text-home">um jogo de corrida em mundo aberto ambientado no
+                                    Japão.
                                 </p>
                             </div>
                             <div class="card-rating-plat">
@@ -302,7 +317,7 @@
                             //console.log('clicou');
                             scrollPosition += cardWidth;
                             //console.log(scrollPosition);
-                            $('.carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+                            $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
                         }
                     })
                     const prev = $('.carousel-control-prev-home');
@@ -311,7 +326,7 @@
                             //console.log('clicou');
                             scrollPosition -= cardWidth;
                             //console.log(scrollPosition);
-                            $('.carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+                            $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
                         }
                     })
                 </Script>
@@ -405,7 +420,7 @@
 
     <!--Inicio Footer-->
     <footer>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-12 foot-spc">
             <img src="img/logo.jpg" alt="">
             <p>Conectando Jogadores.</p>
             <p>Criando Histórias</p>
@@ -417,14 +432,14 @@
                 <img src="img/youtube.png" alt="" class="img">
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-12 foot-spc">
             <h4>Navegação</h4>
             <p>Jogos</p>
             <p>Notícias</p>
             <p>comundade</p>
             <p>sobre</p>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-12 foot-spc">
             <h4>Suporte</h4>
             <p>FAQ</p>
             <p>Central de Ajuda</p>
@@ -432,7 +447,7 @@
             <p>termos de uso</p>
             <p>políticas de Privacidade</p>
         </div>
-        <div class="col-2">
+        <div class="col-lg-2 col-md-12 foot-spc">
             <h4>Fique por dentro</h4>
             <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
             <form action="">
