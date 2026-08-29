@@ -438,34 +438,3 @@ footer img {
 
 /*Fim Footer*/
 
-/* ===== ver como pode padronizar as img em um tamanho bom ===== */
-
-.carousel-item img {
-    max-height: 500px;
-    object-fit: cover;
-    object-position: top;
-
-}
-/* ===== Cards Jogos (página jogos.html) ===== */
-
-.card-jogos {
-    background-color: rgb(0, 0, 0);
-    border: 1px solid #c9a5ff;
-    border-radius: 20px 10px;
-}
-
-.card-jogos h3 {
-    font-family: "Tektur", sans-serif;
-    font-size: 18px;
-    color: white;
-    
-}
-
-.badge-jogos {
-    background-color: #7c2bf5;
-    color: white;
-    font-size: 11px;
-}
-.card-jogos p {
-    color: rgb(244, 238, 238);
-}
