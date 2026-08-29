@@ -1,0 +1,307 @@
+:root{
+  --bg: #060608;
+  --bg-soft: #0d0d12;
+  --purple: #9333ea;
+  --purple-bright: #a855f7;
+  --purple-glow: #c084fc;
+  --text-soft: #b8b8c4;
+  --card-bg: #101015;
+  --border: rgba(168,85,247,0.25);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, .brand, .nav-link{
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* NAVBAR */
+.navbar-gz{
+  background: #000;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 40px;
+}
+.navbar-gz .brand{
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.navbar-gz .brand span{
+  color: var(--purple-bright);
+}
+.navbar-gz .nav-link{
+  color: #e5e5e5;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.navbar-gz .nav-link.active{
+  color: var(--purple-bright);
+}
+
+.navbar-toggler{
+  border: 1px solid var(--border);
+  color: #fff;
+  background: transparent;
+  font-size: 1.3rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: none;
+}
+.mobile-menu{
+  display: none;
+  flex-direction: column;
+  background: #000;
+  border-top: 1px solid var(--border);
+  padding: 14px 0 4px;
+}
+.mobile-menu.open{
+  display: flex;
+}
+.mobile-menu .nav-link{
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* HEADER */
+.catalog-header{
+  padding: 60px 40px 30px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse at top left, rgba(147,51,234,0.15), transparent 60%);
+}
+.eyebrow{
+  color: var(--purple-glow);
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.catalog-title{
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 6px 0 10px;
+}
+.catalog-title span{
+  color: var(--purple-bright);
+}
+.catalog-sub{
+  color: var(--text-soft);
+  max-width: 600px;
+  font-size: 0.95rem;
+}
+
+.search-box{
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 420px;
+  margin-top: 20px;
+}
+.search-box input{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.search-box i{
+  color: var(--purple-bright);
+}
+
+/* FILTROS */
+.filters{
+  padding: 24px 40px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+.chip{
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.chip:hover{
+  border-color: var(--purple-bright);
+  color: #fff;
+}
+.chip.active{
+  background: linear-gradient(135deg, var(--purple), #7e22ce);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+}
+
+/* GRID */
+.catalog-grid{
+  padding: 36px 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+.catalog-grid .featured{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.game-card{
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.featured{
+  aspect-ratio: auto;
+}
+.game-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(147,51,234,0.35);
+}
+.game-card .art{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  color: rgba(255,255,255,0.85);
+}
+.game-card .overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.1) 55%, transparent 100%);
+}
+.game-card .info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+}
+.game-card .tag{
+  display: inline-block;
+  background: rgba(168,85,247,0.2);
+  border: 1px solid var(--purple-bright);
+  color: var(--purple-glow);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.game-card h3{
+  font-size: 1.15rem;
+  margin: 0 0 2px;
+  font-weight: 700;
+}
+.featured h3{
+  font-size: 1.6rem;
+}
+.game-card .meta{
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  display: flex;
+  gap: 12px;
+}
+.game-card .meta i{
+  color: var(--purple-glow);
+}
+
+/* cores diferentes pra cada card */
+.art-1{ background: linear-gradient(135deg,#1e0b3c,#4c1d95,#000); }
+.art-2{ background: linear-gradient(135deg,#3b0764,#000,#1e0b3c); }
+.art-3{ background: linear-gradient(135deg,#000,#5b21b6,#000); }
+.art-4{ background: linear-gradient(135deg,#4c1d95,#000); }
+.art-5{ background: linear-gradient(135deg,#1e0b3c,#000,#7e22ce); }
+.art-6{ background: linear-gradient(135deg,#000,#4c1d95); }
+.art-7{ background: linear-gradient(135deg,#5b21b6,#000,#1e0b3c); }
+
+/* RESPONSIVO */
+@media (max-width: 767px){
+  .navbar-gz{ padding: 14px 20px; }
+  .navbar-gz .d-md-flex{ display: none !important; }
+  .navbar-toggler{ display: inline-block; }
+
+  .catalog-header{ padding: 36px 20px 24px; }
+  .catalog-title{ font-size: 2rem; }
+  .search-box{ max-width: 100%; }
+
+  .filters{
+    padding: 16px 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chip{ flex: 0 0 auto; }
+
+  .catalog-grid{
+    padding: 24px 20px 60px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .catalog-grid .featured{
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 4/5;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .catalog-grid{ grid-template-columns: repeat(2, 1fr); }
+  .catalog-grid .featured{ grid-column: span 2; }
+}
+.badge-top{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--purple), #7e22ce);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(168,85,247,0.5);
+  z-index: 2;
+}
+.catalog-grid{
+  padding: 36px 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  grid-auto-flow: dense; 
+}
+.card-top{
+  grid-row: span 2;
+}
