@@ -46,7 +46,7 @@ header {
 }
 
 .navbar-toggler {
-    filter: invert(100%);
+      box-shadow: 0 0 3px 3px #6d2ce9;
 }
 
 .menu a {
@@ -94,7 +94,13 @@ a:hover {
     text-decoration: none;
 }
 
-
+.navbar-toggler-icon{
+    background-image: url("../img/burger-bar.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center center;
+    filter:invert(100%);
+}
 
 
 
@@ -306,7 +312,7 @@ c {
         height: 40vw;
     }
 
-
+    
 }
 
 @media screen and (max-width:700px) {
@@ -319,6 +325,19 @@ c {
     .img-wraper {
         max-width: 100%;
         height: 50vw;
+    }
+
+    banner {
+        overflow: hidden;
+    }
+
+    .bantext {
+        background-color: rgba(0, 0, 0, 80%);
+    }
+
+    #pers_banner {
+        position: relative;
+        left: -90px;
     }
 
 }
@@ -446,6 +465,8 @@ footer {
 .col-md-12.foot-spc {
     align-content: center;
     justify-content: center;
+    text-align: center;
+    padding: 20px
 }
 
 footer p {
