@@ -305,3 +305,62 @@ h1, h2, h3, .brand, .nav-link{
 .card-top{
   grid-row: span 2;
 }
+footer {
+    display: flex;
+    background-color: #020913;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.col-md-12.foot-spc {
+    align-content: center;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+footer img {
+    max-width: 250px;
+}
+
+#social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.img {
+    height: 20px;
+    filter: invert(100%);
+}
+
+#email {
+    margin-top: 20px;
+    background-color: #020913;
+    box-shadow: 0 0 10px 1px #7c2bf5;
+    border: none;
+
+}
+
+#send {
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 0 0 30px 0px #7c2bf5;
+
+
+}
+
+#send img {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -2px;
+    top: 1px;
+    ;
+}

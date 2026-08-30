@@ -23,6 +23,7 @@
   <div class="d-flex justify-content-between align-items-center">
     <div class="brand">
      <i class="bi bi-controller"></i> GAME<span>ZONE</span>
+   
     </div>
     <div class="d-none d-md-flex gap-4">
       <a href="#" class="nav-link active">JOGOS</a>
@@ -55,7 +56,7 @@
     <input type="text" placeholder="Buscar jogo, gênero, plataforma...">
   </div>
 </div>
-
+ <!--inicio do catalogo de jogos-->
 <div class="filters">
   <div class="chip active">Todos</div>
   <div class="chip">Ação</div>
@@ -291,7 +292,8 @@
   </div>
 
 </div>
-
+ <!--fim do catalogo de jogos-->
+  <!--inicio da animação do script-->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
  AOS.init();
@@ -320,5 +322,42 @@ searchInput.addEventListener('input', () => {
   });
 });
 </script>
+ <footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="img/logo.jpg" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="img/discord.png" alt="" class="img">
+                <img src="img/instagram.png" alt="" class="img">
+                <img src="img/twitter.png" alt="" class="img">
+                <img src="img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>Jogos</p>
+            <p>Notícias</p>
+            <p>comundade</p>
+            <p>sobre</p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Suporte</h4>
+            <p>FAQ</p>
+            <p>Central de Ajuda</p>
+            <p>contato</p>
+            <p>termos de uso</p>
+            <p>políticas de Privacidade</p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>
