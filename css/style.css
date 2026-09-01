@@ -46,7 +46,7 @@ header {
 }
 
 .navbar-toggler {
-      box-shadow: 0 0 3px 3px #6d2ce9;
+    box-shadow: 0 0 3px 3px #6d2ce9;
 }
 
 .menu a {
@@ -94,12 +94,12 @@ a:hover {
     text-decoration: none;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
     background-image: url("../img/burger-bar.png");
     background-repeat: no-repeat;
     background-size: 30px 30px;
     background-position: center center;
-    filter:invert(100%);
+    filter: invert(100%);
 }
 
 
@@ -312,7 +312,7 @@ c {
         height: 40vw;
     }
 
-    
+
 }
 
 @media screen and (max-width:700px) {
@@ -333,6 +333,7 @@ c {
 
     .bantext {
         background-color: rgba(0, 0, 0, 80%);
+        z-index: 1;
     }
 
     #pers_banner {
