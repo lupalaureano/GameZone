@@ -1,0 +1,44 @@
+/* Ajustes visuais da página de Comunidade — o restante é Bootstrap 5 */
+
+.navbar .nav-link.active {
+  font-weight: 600;
+}
+
+.community-hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.community-hero .stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.accordion-button .topic-meta {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.group-card,
+.poll-card {
+  height: 100%;
+}
+
+.comment-form textarea {
+  min-height: 5rem;
+}
