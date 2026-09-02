@@ -1,0 +1,373 @@
+/* Identidade visual da Comunidade — alinhada à index (style.css) */
+
+header.navbar {
+  background-color: transparent !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0;
+}
+
+header .container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+}
+
+header .navbar-brand {
+  padding: 0;
+  margin: 0;
+}
+
+header .menu {
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header .navbar-nav {
+  flex-direction: row;
+  align-items: center;
+  margin: 0 !important;
+}
+
+header .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+header .menu a.nav-link,
+header .menu a.nav-link:visited,
+header .menu a.nav-link.active {
+  display: flex;
+  align-items: center;
+  color: #fff !important;
+  padding: 15px;
+  line-height: 1;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+header .menu a.nav-link:hover {
+  color: #6d2ce9 !important;
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+header .menu a.nav-link.active {
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+header .d-flex {
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  header .menu {
+    display: flex !important;
+  }
+
+  header .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  header .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  header .menu.collapse:not(.show) {
+    display: none !important;
+  }
+
+  header .menu.show {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header .menu a.nav-link {
+    min-height: 48px;
+    justify-content: center;
+  }
+}
+
+.community-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.community-hero {
+  margin: 20px auto 10px;
+  padding: 28px 24px;
+  max-width: 1160px;
+  background-color: #020913;
+  border: 1px solid #233571;
+  border-radius: 55px 4px 55px 4px;
+  box-shadow: inset 0 0 60px 0 #233571a8;
+}
+
+.community-hero h1 {
+  margin-bottom: 8px;
+}
+
+.community-hero > p,
+.community-muted {
+  font-size: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #c9b8e8;
+}
+
+.community-stats {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  font-family: "Tektur", sans-serif;
+}
+
+.community-tabs {
+  border-bottom: 1px solid #233571;
+}
+
+.community-tabs .nav-link {
+  color: #fff !important;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  padding: 15px;
+  margin: 0;
+}
+
+.community-tabs .nav-link:hover {
+  color: #6d2ce9 !important;
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+.community-tabs .nav-link.active {
+  color: #fff !important;
+  background: none;
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+.community-chip {
+  display: inline-block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #7c2bf5;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid #7c2bf5;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 4px;
+}
+
+.community-chip.is-outline {
+  background: none;
+  color: #fff;
+}
+
+.accordion-item {
+  background-color: #020913;
+  border: 1px solid #c9a5ff;
+  border-radius: 20px 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background-color: #020913;
+  color: #fff;
+  font-family: "Tektur", sans-serif;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0a1024 !important;
+  color: #fff !important;
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 2px #7c2bf5;
+}
+
+.accordion-button::after {
+  filter: invert(1) drop-shadow(0 0 3px #7c2bf5);
+}
+
+.accordion-body {
+  background-color: #020913;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+}
+
+.accordion-body hr {
+  border-color: #233571;
+  opacity: 1;
+}
+
+.accordion-body .text-muted {
+  color: #9a88c4 !important;
+}
+
+.accordion-button .topic-meta {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #c9b8e8;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: "Tektur", sans-serif;
+  color: #fff;
+  flex-shrink: 0;
+  background-color: #7c2bf5;
+  box-shadow: 0 0 8px #7c2bf5;
+}
+
+.avatar.bg-primary,
+.avatar.bg-success,
+.avatar.bg-danger,
+.avatar.bg-warning,
+.avatar.bg-info {
+  background-color: #7c2bf5;
+  color: #fff;
+}
+
+.avatar.bg-success {
+  background-color: #6d2ce9;
+}
+
+.avatar.bg-danger {
+  background-color: #4b1d9b;
+}
+
+.avatar.bg-warning {
+  background-color: #baa5e0;
+  color: #020913;
+}
+
+.avatar.bg-info {
+  background-color: #9b6cff;
+}
+
+.comment-form textarea,
+.comment-form .form-control,
+.poll-card .form-control {
+  min-height: 5rem;
+  background-color: #020913;
+  border: 1px solid #7c2bf5;
+  color: #fff;
+  box-shadow: 0 0 8px 0 #7c2bf5;
+}
+
+.comment-form .form-control:focus {
+  background-color: #020913;
+  color: #fff;
+  border-color: #c9a5ff;
+  box-shadow: 0 0 12px 1px #7c2bf5;
+}
+
+.comment-form .form-label,
+.poll-card .form-label,
+.poll-card legend {
+  color: #c9b8e8;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13px;
+}
+
+.group-card,
+.poll-card {
+  height: 100%;
+  background-color: #000;
+  border: 1px solid #c9a5ff;
+  border-radius: 20px 10px;
+  color: #fff;
+}
+
+.group-card .card-body,
+.poll-card .card-body {
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+.group-card h2,
+.poll-card h2 {
+  font-family: "Tektur", sans-serif;
+  font-size: 20px;
+}
+
+.group-card p,
+.poll-card p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 14px;
+}
+
+.progress {
+  background-color: #020913;
+  border: 1px solid #233571;
+}
+
+.progress-bar,
+.progress-bar.bg-success,
+.progress-bar.bg-info {
+  background-color: #7c2bf5;
+}
+
+.poll-card .form-check-input {
+  background-color: #020913;
+  border-color: #7c2bf5;
+}
+
+.poll-card .form-check-input:checked {
+  background-color: #7c2bf5;
+  border-color: #7c2bf5;
+}
+
+.modal-content {
+  background-color: #020913;
+  border: 1px solid #c9a5ff;
+  color: #fff;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #233571;
+}
+
+.modal-title {
+  font-family: "Tektur", sans-serif;
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+@media screen and (max-width: 700px) {
+  .community-hero {
+    border-radius: 24px 4px;
+    padding: 20px 16px;
+  }
+}
