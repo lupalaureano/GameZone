@@ -364,3 +364,12 @@ footer img {
     top: 1px;
     ;
 }
+.game-card.featured {
+  background-image: url('../img/gta6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+}
