@@ -373,3 +373,105 @@ footer img {
 .overlay {
   background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
 }
+.nba-card {
+  background-image: url('../img/nba.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.eafc-card {
+  background-image: url('../img/eafc.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cybp-card {
+  background-image: url('../img/cybp2077.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.reddead-card {
+  background-image: url('../img/reddead.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.godw-card {
+  background-image: url('../img/godofw.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.resident-card {
+  background-image: url('../img/resident.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.zelda-card {
+  background-image: url('../img/zelda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.spiderman-card {
+  background-image: url('../img/SpiderMan.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tlou-card {
+  background-image: url('../img/The_Last_of_Us_2_capa.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.outlast-card {
+  background-image: url('../img/Outlast.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.baldurs-card {
+  background-image: url("../img/Baldur's.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nfs-card {
+  background-image: url('../img/need_for_Speed.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.witcher-card {
+  background-image: url('../img/the-witcher.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ride-card {
+  background-image: url('../img/ride6.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nfl-card {
+  background-image: url('../img/nfl.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.silenthill-card {
+  background-image: url('../img/Silent_Hill.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.forza-card {
+  background-image: url('../img/for6.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
