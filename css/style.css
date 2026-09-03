@@ -534,25 +534,45 @@ footer img {
 .tab_borda thead {
     font-size: 26px;
 }
+
 .week td{
     text-align: center;
     box-shadow: 0 0 0px .2px #6d2ce9;
 }
+
 .dias tr td{
     height: 8em;
     text-align: left;
     vertical-align: top;
     box-shadow: 0 0 0px .2px #6d2ce9;
     width: 14.286%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .other_month{
     color: gray;
 }
 
-/* Inicio Calendário */
-
-.bi-calendar{
+.bi-calendar, .bi-bell{
     margin:7px;
 }
 
+@media screen and (max-width:700px) {
+
+banner{
+    height:400px;
+}
+.dias tr td{
+height: 4em;
+}
+
+
+}
+
+
+.alert{
+    display: flex;
+    align-items: center;
+}
 /* Fim Calendário */

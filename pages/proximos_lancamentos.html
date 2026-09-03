@@ -126,19 +126,26 @@
                 <a href="pages/proximos_lancamentos.html" style="text-decoration: none">
                     <h4>Calendário de Lançamentos</h4>
                 </a>
-                
+
             </div>
         </div>
         <script>
-            const today = new Date();
+
+            const weekdays = ["Dom","Seg","Ter","Qua","Qui","Sex","Sab"];
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            
             const now = new Date();
 
             const year = now.getFullYear();      // e.g., 2026
-            const month = now.getMonth() + 1;    // Important: getMonth() is 0-indexed (0 = January), so add 1
+            const month = now.getMonth();    // Important: getMonth() is 0-indexed (0 = January), so add 1
             const day = now.getDate();          // Day of the month (1-31)
             const weekday = now.getDay();          // Day of the week(mon - sun)
 
-            console.log(`Year: ${year}, Month: ${month}, Day: ${day}, Weekday: ${weekday}`);
+            console.log(`Year: ${year}, Month: ${months[month]}, Day: ${day}, Weekday: ${weekdays[weekday]}`);
+
+            const monthStart = new Date(`${months[month]} 1 ${year} 0:0:0`);
+            console.log(monthStart);
+
         </script>
         <table class="col-12 tab_borda">
             <thead>
@@ -175,7 +182,7 @@
                     <td style="background-image: url(../img/lancamentos/8.png);">5</td>
                 </tr>
                 <tr>
-                    <td >6</td>
+                    <td>6</td>
                     <td>7</td>
                     <td>8</td>
                     <td>9</td>
@@ -183,7 +190,7 @@
                     <td>11</td>
                     <td>12</td>
                 </tr>
-                  <tr>
+                <tr>
                     <td>13</td>
                     <td>14</td>
                     <td style="background-image: url(../img/lancamentos/5.png);">15</td>
@@ -192,7 +199,7 @@
                     <td style="background-image: url(../img/lancamentos/9.png);">18</td>
                     <td>19</td>
                 </tr>
-                  <tr>
+                <tr>
                     <td>20</td>
                     <td>21</td>
                     <td>22</td>
@@ -201,7 +208,7 @@
                     <td style="background-image: url(../img/lancamentos/2.png);">25</td>
                     <td>26</td>
                 </tr>
-                  <tr>
+                <tr>
                     <td>27</td>
                     <td>28</td>
                     <td style="background-image: url(../img/lancamentos/6.png);">29</td>
@@ -215,6 +222,26 @@
     </div>
 
     <!-- Fim Calendário-->
+
+    <div id="estatisticas">
+        <div class="card-sts">
+            <img src="../img/notification-bell.png" alt="Alerta" style="height: 40px;">
+        </div>
+        <div class="card-sts" style="flex-direction: column;">
+            <h4>
+                <c>Não perca nenhum lançamento </c>
+            </h4>
+            <div><span>Ative as notificações e receba alerta dos jogos mais aguardados.</span></div>
+        </div>
+        <div class="card-sts">
+            <a href="#" class="btn_purp alert"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                </svg>
+                Ativar Notificações</a>
+        </div>
+    </div>
 
     <!-- Inicio Estatisticas-->
     <div id="estatisticas">
