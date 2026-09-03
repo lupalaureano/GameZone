@@ -548,3 +548,11 @@ footer img {
 .other_month{
     color: gray;
 }
+
+/* Inicio Calendário */
+
+.bi-calendar{
+    margin:7px;
+}
+
+/* Fim Calendário */
