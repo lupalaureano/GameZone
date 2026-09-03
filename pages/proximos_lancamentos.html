@@ -123,12 +123,94 @@
                 </svg>
             </div>
             <div>
-                <a href="pages/proximos_lancamentos.html" style="text-decoration: none" >
+                <a href="pages/proximos_lancamentos.html" style="text-decoration: none">
                     <h4>Lançamentos</h4>
                 </a>
             </div>
         </div>
+        <script>
+            const today = new Date();
+            const now = new Date();
 
+            const year = now.getFullYear();      // e.g., 2026
+            const month = now.getMonth() + 1;    // Important: getMonth() is 0-indexed (0 = January), so add 1
+            const day = now.getDate();          // Day of the month (1-31)
+            const weekday = now.getDay();          // Day of the week(mon - sun)
+
+            console.log(`Year: ${year}, Month: ${month}, Day: ${day}, Weekday: ${weekday}`);
+        </script>
+        <table class="col-12 tab_borda">
+            <thead>
+                <tr>
+                    <th>
+                        < </th>
+                    <th>Setembro</th>
+                    <th>
+                        >
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <table class="col-12 tab_borda">
+            <thead class="week">
+                <tr>
+                    <td>Dom</td>
+                    <td>Seg</td>
+                    <td>Ter</td>
+                    <td>Qua</td>
+                    <td>Qui</td>
+                    <td>Sex</td>
+                    <td>Sab</td>
+                </tr>
+            </thead>
+            <tbody class="dias">
+                <tr>
+                    <td class="other_month">30</td>
+                    <td class="other_month">31</td>
+                    <td>1</td>
+                    <td style="background-image: url(../img/lancamentos/1.png);">2</td>
+                    <td style="background-image: url(../img/lancamentos/4.png);">3</td>
+                    <td style="background-image: url(../img/lancamentos/7.png);">4</td>
+                    <td style="background-image: url(../img/lancamentos/8.png);">5</td>
+                </tr>
+                <tr>
+                    <td >6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td style="background-image: url(../img/lancamentos/5.png);">15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td style="background-image: url(../img/lancamentos/9.png);">18</td>
+                    <td>19</td>
+                </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td style="background-image: url(../img/lancamentos/3.png);">24</td>
+                    <td style="background-image: url(../img/lancamentos/2.png);">25</td>
+                    <td>26</td>
+                </tr>
+                  <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td style="background-image: url(../img/lancamentos/6.png);">29</td>
+                    <td>30</td>
+                    <td class="other_month">1</td>
+                    <td class="other_month">2</td>
+                    <td class="other_month">3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Fim Calendário-->

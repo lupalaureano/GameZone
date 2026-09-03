@@ -213,6 +213,7 @@ c {
     border-radius: 20px 10px;
     corner-shape: bevel;
     margin: 0 1em;
+    /* clip-path: polygon(20px 0%, calc(100% - 10px) 0%, 100% 9px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 20px); */
 }
 
 .card-img-top-home {
@@ -220,6 +221,8 @@ c {
     corner-shape: bevel;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    /* clip-path: polygon(20px 0%, calc(100% - 10px) 0%, 100% 9px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 20px); */
+
 
 }
 
@@ -518,3 +521,30 @@ footer img {
 }
 
 /*Fim Footer*/
+
+/* inicio calendário */
+
+.tab_borda {
+    text-align: center;
+    border: #6d2ce9 1px solid;
+    box-shadow: 0 0 0px .2px #6d2ce9;
+    background-color: #6e2ce91f;
+}
+
+.tab_borda thead {
+    font-size: 26px;
+}
+.week td{
+    text-align: center;
+    box-shadow: 0 0 0px .2px #6d2ce9;
+}
+.dias tr td{
+    height: 8em;
+    text-align: left;
+    vertical-align: top;
+    box-shadow: 0 0 0px .2px #6d2ce9;
+    width: 14.286%;
+}
+.other_month{
+    color: gray;
+}
