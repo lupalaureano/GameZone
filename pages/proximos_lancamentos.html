@@ -129,30 +129,13 @@
 
             </div>
         </div>
-        <script>
 
-            const weekdays = ["Dom","Seg","Ter","Qua","Qui","Sex","Sab"];
-            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-            
-            const now = new Date();
-
-            const year = now.getFullYear();      // e.g., 2026
-            const month = now.getMonth();    // Important: getMonth() is 0-indexed (0 = January), so add 1
-            const day = now.getDate();          // Day of the month (1-31)
-            const weekday = now.getDay();          // Day of the week(mon - sun)
-
-            console.log(`Year: ${year}, Month: ${months[month]}, Day: ${day}, Weekday: ${weekdays[weekday]}`);
-
-            const monthStart = new Date(`${months[month]} 1 ${year} 0:0:0`);
-            console.log(monthStart);
-
-        </script>
         <table class="col-12 tab_borda">
             <thead>
                 <tr>
                     <th>
                         < </th>
-                    <th>Setembro</th>
+                    <th id="mes">Setembro</th>
                     <th>
                         >
                     </th>
@@ -338,6 +321,58 @@
 
 
     <!-- Fim importacao Bootstrap-->
+
+    <!-- construção calendario -->
+
+    <script>
+
+        const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let now = new Date();
+        const constructMonthCalendar = () => {
+
+
+            /*
+            const year = now.getFullYear();      // e.g., 2026
+            const month = now.getMonth();    // Important: getMonth() is 0-indexed (0 = January), so add 1
+            const day = now.getDate();          // Day of the month (1-31)
+            const weekday = now.getDay();          // Day of the week(mon - sun)
+
+            console.log(`Year: ${year}, Month: ${months[month]}, Day: ${day}, Weekday: ${weekdays[weekday]}`);
+            */
+
+            const m = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+            //console.log(m);
+
+            const monthStart = new Date(`${months[now.getMonth()]} 1 ${now.getFullYear()} 0:0:0`);
+            const weekdayStart = monthStart.getDay();          // Day of the week(mon - sun)
+            const weekdayEnd = new Date(`${months[now.getMonth()]} ${m} ${now.getFullYear()} 0:0:0`);
+
+
+            const curentMonth = document.getElementById("mes");
+            curentMonth.innerHTML = meses[now.getMonth()];
+
+
+
+            for (i = 0; i < weekdayStart; i++) {
+                console.log(weekdays[i]);
+            }
+
+            const idCreator = [];
+            for (i = 0; i < m; i++) {
+                var id = monthStart.getDate() + i + "_" + months[monthStart.getMonth()] + "_" + monthStart.getFullYear();
+                // console.log(id);
+            }
+
+
+
+        }
+
+        constructMonthCalendar();
+    </script>
+
+    <!-- fim construção calendario -->
 </body>
 
 </html>
