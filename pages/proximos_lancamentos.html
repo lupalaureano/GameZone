@@ -154,7 +154,7 @@
                     <td>Sab</td>
                 </tr>
             </thead>
-            <tbody class="dias">
+            <tbody id="dias"class="dias">
                 <tr>
                     <td class="other_month">30</td>
                     <td class="other_month">31</td>
@@ -348,15 +348,21 @@
             const monthStart = new Date(`${months[now.getMonth()]} 1 ${now.getFullYear()} 0:0:0`);
             const weekdayStart = monthStart.getDay();          // Day of the week(mon - sun)
             const weekdayEnd = new Date(`${months[now.getMonth()]} ${m} ${now.getFullYear()} 0:0:0`);
+            const prevMonth = new Date (`${months[now.getMonth()-1]} ${new Date(now.getFullYear(), now.getMonth(), 0).getDate()} ${now.getFullYear()} 0:0:0`);
+            const nextMonth = new Date (`${months[now.getMonth()+1]} ${new Date(now.getFullYear(), now.getMonth()+2, 0).getDate()} ${now.getFullYear()} 0:0:0`);
 
 
             const curentMonth = document.getElementById("mes");
             curentMonth.innerHTML = meses[now.getMonth()];
 
 
-
+            let element = document.getElementById("dias").childNodes[1];
             for (i = 0; i < weekdayStart; i++) {
-                console.log(weekdays[i]);
+                const f = document.createElement("td");
+                const textNode = document.createTextNode(i);
+                f.appendChild(textNode);
+                //element.appendChild(f);
+                //console.log(f);
             }
 
             const idCreator = [];
