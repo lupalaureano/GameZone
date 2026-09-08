@@ -4,32 +4,52 @@
 
 <head>
 
-```
-<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>GameZone - Perfil do Usuário</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CSS principal do site -->
-<link rel="stylesheet" href="../style.css">
+    <title>GameZone - Perfil do Usuário</title>
+    <!--importando o Bootstrap-->
 
-<!-- CSS específico do perfil -->
-<link rel="stylesheet" href="usuario.css">
-```
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Fim importacao Bootstrap-->
+
+    <!-- Importando Font google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- fim importacao google fonts-->
+
+    <!-- CSS principal do site -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- CSS específico do perfil -->
+    <link rel="stylesheet" href="../css/usuario.css">
+
 
 </head>
 
 <body>
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-```
-<!-- ============================= -->
-<!-- HEADER / MENU -->
-<!-- ============================= -->
 
-<header>
 
-    <!-- LOGO -->
+    <!-- Fim Importação Jquery-->
+
+    <!-- ============================= -->
+    <!-- HEADER / MENU -->
+    <!-- ============================= -->
+
+    <!-- <header>
+
+    <!- LOGO ->
     <a href="../index.html">
 
         <div class="logo-menu">
@@ -47,18 +67,18 @@
     </a>
 
 
-    <!-- MENU -->
+    <!- MENU ->
     <nav class="menu">
 
         <a href="../index.html">
             Início
         </a>
 
-        <a href="../jogos.html">
+        <a href="../pages/jogos.html">
             Jogos
         </a>
 
-        <a href="#">
+        <a href="../pages/comunidade.html">
             Comunidade
         </a>
 
@@ -69,7 +89,7 @@
     </nav>
 
 
-    <!-- PESQUISA -->
+    <!- PESQUISA ->
     <a href="#" id="pesquisa">
 
         <img
@@ -80,7 +100,7 @@
     </a>
 
 
-    <!-- USUÁRIO -->
+    <!- USUÁRIO ->
     <a href="usuario.html" id="usuario">
 
         <img
@@ -93,422 +113,496 @@
 
     </a>
 
-</header>
-
-
-<!-- ============================= -->
-<!-- CONTEÚDO DO PERFIL -->
-<!-- ============================= -->
-
-<main class="perfil">
-
-
-    <!-- TÍTULO PRINCIPAL -->
-
-    <div class="titulo-perfil">
-
-        <span class="linha-esquerda"></span>
-
-        <div class="titulo-centro">
-
-            <span class="detalhe-titulo"></span>
-
-            <h1>Perfil do Usuário</h1>
-
-            <span class="detalhe-titulo"></span>
+</header> -->
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../pages/jogos.html" class="nav-link">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/noticias.html" class="nav-link">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/comunidade.html" class="nav-link active">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/sobre.html" class="nav-link">sobre</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="pesquisa.html" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="usuario" id="usuario"><img src="../img/user.png" alt="user" id="userimg"> Usuário</a>
+                </div>
+            </div>
 
         </div>
 
-        <span class="linha-direita"></span>
-
-    </div>
-
+    </header>
 
     <!-- ============================= -->
-    <!-- INFORMAÇÕES DO USUÁRIO -->
+    <!-- CONTEÚDO DO PERFIL -->
     <!-- ============================= -->
 
-    <section class="informacoes">
+    <main class="perfil">
 
-        <h2>Informações do Usuário</h2>
 
-        <div class="usuario-principal">
+        <!-- TÍTULO PRINCIPAL -->
 
-            <!-- AVATAR -->
+        <div class="titulo-perfil">
 
-            <div class="usuario-avatar">
+            <span class="linha-esquerda"></span>
 
-                <img
-                    src="../img/user.png"
-                    alt="Ícone do usuário"
-                >
+            <div class="titulo-centro">
+
+                <span class="detalhe-titulo"></span>
+
+                <h1>Perfil do Usuário</h1>
+
+                <span class="detalhe-titulo"></span>
+
+            </div>
+
+            <span class="linha-direita"></span>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- INFORMAÇÕES DO USUÁRIO -->
+        <!-- ============================= -->
+
+        <section class="informacoes">
+
+            <h2>Informações do Usuário</h2>
+
+            <div class="usuario-principal">
+
+                <!-- AVATAR -->
+
+                <div class="usuario-avatar">
+
+                    <img src="../img/user.png" alt="Ícone do usuário">
+
+                </div>
+
+
+                <!-- DADOS -->
+
+                <div class="dados-usuario">
+
+                    <div class="info-card">
+
+                        <span class="info-titulo">
+                            Nome
+                        </span>
+
+                        <span class="info-valor">
+                            Alex Pinheiro
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-titulo">
+                            Usuário
+                        </span>
+
+                        <span class="info-valor">
+                            @alexgamer
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span class="info-titulo">
+                            Nível
+                        </span>
+
+                        <span class="info-valor">
+                            Nível 16
+                        </span>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <!-- DADOS -->
+            <!-- PLATAFORMAS -->
 
-            <div class="dados-usuario">
+            <h3>Plataformas</h3>
 
-                <div class="info-card">
+            <ul class="plataformas">
 
-                    <span class="info-titulo">
-                        Nome
+                <li>PC</li>
+
+                <li>PlayStation</li>
+
+                <li>Xbox</li>
+
+                <li>Nintendo Switch</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- JOGOS FAVORITOS -->
+        <!-- ============================= -->
+
+        <section>
+
+            <h2>Jogos Favoritos</h2>
+
+            <div class="jogos-favoritos">
+
+                <div class="jogo-favorito">
+
+                    <img src="../img/hwleg.jpg" alt="Capa do jogo Hogwarts Legacy">
+
+                    <h3>
+                        Hogwarts Legacy
+                    </h3>
+
+                </div>
+
+
+                <div class="jogo-favorito">
+
+                    <img src="../img/bf6.jpg" alt="Capa do jogo Battlefield 6">
+
+                    <h3>
+                        Battlefield 6
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- ESTATÍSTICAS -->
+        <!-- ============================= -->
+
+        <section>
+
+            <h2>Estatísticas do Jogador</h2>
+
+            <div class="estatisticas-grid">
+
+                <div class="estatistica-card">
+
+                    <span class="numero">
+                        24
                     </span>
 
-                    <span class="info-valor">
-                        Alex Pinheiro
+                    <span class="descricao">
+                        Jogos Concluídos
                     </span>
 
                 </div>
 
 
-                <div class="info-card">
+                <div class="estatistica-card">
 
-                    <span class="info-titulo">
-                        Usuário
+                    <span class="numero">
+                        156
                     </span>
 
-                    <span class="info-valor">
-                        @alexgamer
+                    <span class="descricao">
+                        Horas Jogadas
+                    </span>
+
+                </div>
+
+
+                <div class="estatistica-card">
+
+                    <span class="numero">
+                        18
+                    </span>
+
+                    <span class="descricao">
+                        Conquistas
                     </span>
 
                 </div>
 
 
-                <div class="info-card">
+                <div class="estatistica-card">
 
-                    <span class="info-titulo">
-                        Nível
+                    <span class="numero">
+                        86%
                     </span>
 
-                    <span class="info-valor">
-                        Nível 16
+                    <span class="descricao">
+                        Taxa de Conclusão
                     </span>
 
                 </div>
 
             </div>
 
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- CONQUISTAS -->
+        <!-- ============================= -->
+
+        <section>
+
+            <h2>Conquistas</h2>
+
+            <div class="conquistas-grid">
+
+                <div class="conquista-card">
+
+                    <div class="conquista-icon"></div>
+
+                    <h3>
+                        Explorador de Mundos
+                    </h3>
+
+                    <p>
+                        Explore diferentes mundos e descubra novas aventuras.
+                    </p>
+
+                </div>
+
+
+                <div class="conquista-card">
+
+                    <div class="conquista-icon"></div>
+
+                    <h3>
+                        Primeiro Jogo Concluído
+                    </h3>
+
+                    <p>
+                        Conclua seu primeiro jogo.
+                    </p>
+
+                </div>
+
+
+                <div class="conquista-card">
+
+                    <div class="conquista-icon"></div>
+
+                    <h3>
+                        10 Horas de Jogo
+                    </h3>
+
+                    <p>
+                        Alcance 10 horas de gameplay.
+                    </p>
+
+                </div>
+
+
+                <div class="conquista-card">
+
+                    <div class="conquista-icon"></div>
+
+                    <h3>
+                        Mestre do RPG
+                    </h3>
+
+                    <p>
+                        Conclua grandes desafios em jogos de RPG.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <!--footer>
+
+        <div class="foot-spc">
+
+            <div class="logo-footer">
+
+                <div class="logo-nome-menu">
+                    <span class="game">GAME</span><span class="zone">ZONE</span>
+                </div>
+
+                <div class="logo-subtitulo-menu">
+                    SEU UNIVERSO GAMER
+                </div>
+
+            </div>
+
+            <p>
+                Seu universo gamer em um só lugar.
+            </p>
+
         </div>
 
 
-        <!-- PLATAFORMAS -->
+        <div class="foot-spc">
 
-        <h3>Plataformas</h3>
+            <h3>
+                GameZone
+            </h3>
 
-        <ul class="plataformas">
+            <p>
+                Jogos
+            </p>
 
-            <li>PC</li>
+            <p>
+                Notícias
+            </p>
 
-            <li>PlayStation</li>
+            <p>
+                Guias
+            </p>
 
-            <li>Xbox</li>
-
-            <li>Nintendo Switch</li>
-
-        </ul>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- JOGOS FAVORITOS -->
-    <!-- ============================= -->
-
-    <section>
-
-        <h2>Jogos Favoritos</h2>
-
-        <div class="jogos-favoritos">
-
-            <div class="jogo-favorito">
-
-                <img
-                    src="../img/hwleg.jpg"
-                    alt="Capa do jogo Hogwarts Legacy"
-                >
-
-                <h3>
-                    Hogwarts Legacy
-                </h3>
-
-            </div>
-
-
-            <div class="jogo-favorito">
-
-                <img
-                    src="../img/bf6.jpg"
-                    alt="Capa do jogo Battlefield 6"
-                >
-
-                <h3>
-                    Battlefield 6
-                </h3>
-
-            </div>
+            <p>
+                Ranking
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="foot-spc">
 
-    <!-- ============================= -->
-    <!-- ESTATÍSTICAS -->
-    <!-- ============================= -->
+            <h3>
+                Siga-nos
+            </h3>
 
-    <section>
+            <div id="social">
 
-        <h2>Estatísticas do Jogador</h2>
+                <a href="#">
+                    Instagram
+                </a>
 
-        <div class="estatisticas-grid">
+                <a href="#">
+                    Discord
+                </a>
 
-            <div class="estatistica-card">
-
-                <span class="numero">
-                    24
-                </span>
-
-                <span class="descricao">
-                    Jogos Concluídos
-                </span>
-
-            </div>
-
-
-            <div class="estatistica-card">
-
-                <span class="numero">
-                    156
-                </span>
-
-                <span class="descricao">
-                    Horas Jogadas
-                </span>
-
-            </div>
-
-
-            <div class="estatistica-card">
-
-                <span class="numero">
-                    18
-                </span>
-
-                <span class="descricao">
-                    Conquistas
-                </span>
-
-            </div>
-
-
-            <div class="estatistica-card">
-
-                <span class="numero">
-                    86%
-                </span>
-
-                <span class="descricao">
-                    Taxa de Conclusão
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ============================= -->
-    <!-- CONQUISTAS -->
-    <!-- ============================= -->
-
-    <section>
-
-        <h2>Conquistas</h2>
-
-        <div class="conquistas-grid">
-
-            <div class="conquista-card">
-
-                <div class="conquista-icon"></div>
-
-                <h3>
-                    Explorador de Mundos
-                </h3>
-
-                <p>
-                    Explore diferentes mundos e descubra novas aventuras.
-                </p>
-
-            </div>
-
-
-            <div class="conquista-card">
-
-                <div class="conquista-icon"></div>
-
-                <h3>
-                    Primeiro Jogo Concluído
-                </h3>
-
-                <p>
-                    Conclua seu primeiro jogo.
-                </p>
-
-            </div>
-
-
-            <div class="conquista-card">
-
-                <div class="conquista-icon"></div>
-
-                <h3>
-                    10 Horas de Jogo
-                </h3>
-
-                <p>
-                    Alcance 10 horas de gameplay.
-                </p>
-
-            </div>
-
-
-            <div class="conquista-card">
-
-                <div class="conquista-icon"></div>
-
-                <h3>
-                    Mestre do RPG
-                </h3>
-
-                <p>
-                    Conclua grandes desafios em jogos de RPG.
-                </p>
+                <a href="#">
+                    YouTube
+                </a>
 
             </div>
 
         </div>
 
-    </section>
 
-</main>
+        <div class="foot-spc">
 
+            <h3>
+                Contato
+            </h3>
 
-<!-- ============================= -->
-<!-- FOOTER -->
-<!-- ============================= -->
+            <p>
+                Entre em contato conosco.
+            </p>
 
-<footer>
+            <input type="email" id="email" placeholder="Seu e-mail">
 
-    <div class="foot-spc">
+            <button id="send">
 
-        <div class="logo-footer">
+                <span>➤</span>
 
-            <div class="logo-nome-menu">
-                <span class="game">GAME</span><span class="zone">ZONE</span>
-            </div>
-
-            <div class="logo-subtitulo-menu">
-                SEU UNIVERSO GAMER
-            </div>
+            </button>
 
         </div>
 
-        <p>
-            Seu universo gamer em um só lugar.
-        </p>
 
-    </div>
+        <div class="col-md-12 foot-spc">
 
-
-    <div class="foot-spc">
-
-        <h3>
-            GameZone
-        </h3>
-
-        <p>
-            Jogos
-        </p>
-
-        <p>
-            Notícias
-        </p>
-
-        <p>
-            Guias
-        </p>
-
-        <p>
-            Ranking
-        </p>
-
-    </div>
-
-
-    <div class="foot-spc">
-
-        <h3>
-            Siga-nos
-        </h3>
-
-        <div id="social">
-
-            <a href="#">
-                Instagram
-            </a>
-
-            <a href="#">
-                Discord
-            </a>
-
-            <a href="#">
-                YouTube
-            </a>
+            <p>
+                © 2026 GameZone - Todos os direitos reservados.
+            </p>
 
         </div>
 
-    </div>
+    </footer-->
+
+    <!--Inicio Footer-->
+    <footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="../img/logo.png" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="../img/discord.png" alt="" class="img">
+                <img src="../img/instagram.png" alt="" class="img">
+                <img src="../img/twitter.png" alt="" class="img">
+                <img src="../img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>Jogos</p>
+            <p>Notícias</p>
+            <p>comundade</p>
+            <p>sobre</p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Suporte</h4>
+            <p>FAQ</p>
+            <p>Central de Ajuda</p>
+            <p>contato</p>
+            <p>termos de uso</p>
+            <p>políticas de Privacidade</p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="../img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
+    <!-- Fim footer-->
+    <!--importando o Bootstrap-->
 
 
-    <div class="foot-spc">
-
-        <h3>
-            Contato
-        </h3>
-
-        <p>
-            Entre em contato conosco.
-        </p>
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Seu e-mail"
-        >
-
-        <button id="send">
-
-            <span>➤</span>
-
-        </button>
-
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 
 
-    <div class="col-md-12 foot-spc">
-
-        <p>
-            © 2026 GameZone - Todos os direitos reservados.
-        </p>
-
-    </div>
-
-</footer>
-```
-
+    <!-- Fim importacao Bootstrap-->
 </body>
 
 </html>

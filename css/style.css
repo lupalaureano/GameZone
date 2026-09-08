@@ -3,7 +3,7 @@ body {
     font-size: 18px;
     font-style: normal;
     color: white;
-    background-color: black;
+    background-color: black !important;
 }
 
 
@@ -18,6 +18,7 @@ header {
     height: auto;
     max-width: 1160px;
     margin: auto;
+    background-color: black;
 }
 
 #pesquisa {
@@ -499,14 +500,14 @@ footer img {
     background-color: #020913;
     box-shadow: 0 0 10px 1px #7c2bf5;
     border: none;
-
+    width: 80%;
 }
 
 #send {
     width: 30px;
     height: 30px;
     box-shadow: inset 0 0 30px 0px #7c2bf5;
-
+    vertical-align: middle;
 
 }
 
@@ -514,10 +515,9 @@ footer img {
     filter: invert(100%);
     width: 20px;
     height: 20px;
-    position: relative;
-    left: -2px;
-    top: 1px;
-    ;
+    display: flex;
+    justify-self: center;
+    align-self: center;
 }
 
 /*Fim Footer*/

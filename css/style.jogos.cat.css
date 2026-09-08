@@ -17,12 +17,12 @@
 body{
   background: var(--bg);
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  /*font-family: 'Inter', sans-serif;*/
 }
-
+/* 
 h1, h2, h3, .brand, .nav-link{
   font-family: 'Rajdhani', sans-serif;
-}
+} */
 
 /* NAVBAR */
 .navbar-gz{
@@ -347,7 +347,7 @@ footer img {
 
 }
 
-#send {
+/*#send {
     width: 30px;
     height: 30px;
     box-shadow: inset 0 0 30px 0px #7c2bf5;
@@ -363,7 +363,7 @@ footer img {
     left: -2px;
     top: 1px;
     ;
-}
+}*/
 .gta6-card {
   background-image: url('../img/gta6.png');
   background-size: cover;
