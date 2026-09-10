@@ -284,6 +284,13 @@ header .d-flex {
   box-shadow: 0 0 8px 0 #7c2bf5;
 }
 
+.comment-form textarea::placeholder,
+.comment-form .form-control::placeholder,
+.poll-card .form-control::placeholder {
+  color: #c9b8e8;
+  opacity: 1;
+}
+
 .comment-form .form-control:focus {
   background-color: #020913;
   color: #fff;
