@@ -524,6 +524,11 @@ footer img {
 
 /* inicio calendário */
 
+
+#next_month,#prev_month {
+    width: 15%;
+}
+
 .tab_borda {
     text-align: center;
     border: #6d2ce9 1px solid;

@@ -55,7 +55,7 @@
 
     <header class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a href="../index.html" class="navbar-brand"><img src="../img/logo.jpg" alt="Logo" id="logo"></a>
+            <a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -64,21 +64,22 @@
             <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="pages/jogos.html" class="nav-link active">Jogos</a>
+                        <a href="../pages/jogos.html" class="nav-link active">Jogos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/noticias.html" class="nav-link">Notícias</a>
+                        <a href="../pages/noticias.html" class="nav-link">Notícias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/comunidade.html" class="nav-link">Comunidade</a>
+                        <a href="../pages/comunidade.html" class="nav-link">Comunidade</a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/sobre.html" class="nav-link">sobre</a>
+                        <a href="../pages/sobre.html" class="nav-link">sobre</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="pages/pesquisa.html" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
-                    <a href="pages/usuario" id="usuario"><img src="../img/user.png" alt="user" id="userimg"> Usuário</a>
+                    <a href="../pages/pesquisa.html" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="../pages/usuario" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
+                        Usuário</a>
                 </div>
             </div>
 
@@ -123,9 +124,9 @@
                 </svg>
             </div>
             <div>
-                <a href="pages/proximos_lancamentos.html" style="text-decoration: none">
-                    <h4>Calendário de Lançamentos</h4>
-                </a>
+
+                <h4>Calendário de Lançamentos</h4>
+
 
             </div>
         </div>
@@ -133,12 +134,16 @@
         <table class="col-12 tab_borda">
             <thead>
                 <tr>
-                    <th>
+
+                    <th id="prev_month">
                         < </th>
+
                     <th id="mes">Setembro</th>
-                    <th>
+
+                    <th id="next_month">
                         >
                     </th>
+
                 </tr>
             </thead>
         </table>
@@ -154,7 +159,7 @@
                     <td>Sab</td>
                 </tr>
             </thead>
-            <tbody id="dias"class="dias">
+            <tbody id="dias" class="dias">
                 <tr>
                     <td class="other_month">30</td>
                     <td class="other_month">31</td>
@@ -267,7 +272,7 @@
     <!--Inicio Footer-->
     <footer>
         <div class="col-lg-2 col-md-12 foot-spc">
-            <img src="../img/logo.jpg" alt="">
+            <img src="../img/logo.png" alt="">
             <p>Conectando Jogadores.</p>
             <p>Criando Histórias</p>
             <p>construindo o futuro dos Games.</p>
@@ -324,56 +329,33 @@
 
     <!-- construção calendario -->
 
+
+    <script src="../js/index.js"></script>
     <script>
+
+        const p = document.getElementById("prev_month");
+        const n = document.getElementById("next_month");
 
         const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
         let now = new Date();
-        const constructMonthCalendar = () => {
 
+        p.addEventListener('click', () => {
+            //console.log('Element was clicked!');
+            const temp = now.getMonth();
+            now.setMonth(temp - 1);
+            constructMonthCalendar();
+        });
 
-            /*
-            const year = now.getFullYear();      // e.g., 2026
-            const month = now.getMonth();    // Important: getMonth() is 0-indexed (0 = January), so add 1
-            const day = now.getDate();          // Day of the month (1-31)
-            const weekday = now.getDay();          // Day of the week(mon - sun)
+        n.addEventListener('click', () => {
+            //console.log('Element was clicked!');
+            const temp = now.getMonth();
+            now.setMonth(temp + 1);
+            constructMonthCalendar();
+        });
 
-            console.log(`Year: ${year}, Month: ${months[month]}, Day: ${day}, Weekday: ${weekdays[weekday]}`);
-            */
-
-            const m = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-            //console.log(m);
-
-            const monthStart = new Date(`${months[now.getMonth()]} 1 ${now.getFullYear()} 0:0:0`);
-            const weekdayStart = monthStart.getDay();          // Day of the week(mon - sun)
-            const weekdayEnd = new Date(`${months[now.getMonth()]} ${m} ${now.getFullYear()} 0:0:0`);
-            const prevMonth = new Date (`${months[now.getMonth()-1]} ${new Date(now.getFullYear(), now.getMonth(), 0).getDate()} ${now.getFullYear()} 0:0:0`);
-            const nextMonth = new Date (`${months[now.getMonth()+1]} ${new Date(now.getFullYear(), now.getMonth()+2, 0).getDate()} ${now.getFullYear()} 0:0:0`);
-
-
-            const curentMonth = document.getElementById("mes");
-            curentMonth.innerHTML = meses[now.getMonth()];
-
-
-            let element = document.getElementById("dias").childNodes[1];
-            for (i = 0; i < weekdayStart; i++) {
-                const f = document.createElement("td");
-                const textNode = document.createTextNode(i);
-                f.appendChild(textNode);
-                //element.appendChild(f);
-                //console.log(f);
-            }
-
-            const idCreator = [];
-            for (i = 0; i < m; i++) {
-                var id = monthStart.getDate() + i + "_" + months[monthStart.getMonth()] + "_" + monthStart.getFullYear();
-                // console.log(id);
-            }
-
-
-
-        }
+        
 
         constructMonthCalendar();
     </script>
