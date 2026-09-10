@@ -1,10 +1,11 @@
 /* Identidade visual da Comunidade — alinhada à index (style.css) */
 
+/* Espaçamento do header igual ao index (style.css + Bootstrap 4) */
 header.navbar {
-  background-color: transparent !important;
+  background-color: black !important;
   flex-wrap: nowrap;
   align-items: center;
-  padding: 0;
+  padding: 0.5rem 1rem;
 }
 
 header .container-fluid {
@@ -13,12 +14,17 @@ header .container-fluid {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 header .navbar-brand {
-  padding: 0;
-  margin: 0;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  margin-left: 0;
 }
 
 header .menu {
