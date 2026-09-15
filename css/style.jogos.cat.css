@@ -302,9 +302,7 @@ h1, h2, h3, .brand, .nav-link{
   gap: 24px;
   grid-auto-flow: dense; 
 }
-.card-top{
-  grid-row: span 2;
-}
+
 footer {
     display: flex;
     background-color: #020913;
