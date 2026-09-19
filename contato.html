@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | GameZone</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: "Rajdhani", sans-serif;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1220px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           CORES
+        ========================= */
+
+        :root {
+            --purple: #8b20ff;
+            --purple-light: #a94cff;
+            --blue: #173b80;
+            --dark-blue: #050d1c;
+            --dark-blue-2: #071226;
+            --border: #243c70;
+            --text: #f5f5ff;
+            --muted: #aeb8ce;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 105px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            width: 43px;
+            height: 43px;
+
+            border: 4px solid var(--purple);
+
+            clip-path: polygon(
+                25% 5%,
+                100% 25%,
+                100% 75%,
+                25% 95%,
+                0 50%
+            );
+
+            filter: drop-shadow(0 0 8px var(--purple));
+        }
+
+        .logo-text strong {
+            display: block;
+
+            font-size: 28px;
+            line-height: .85;
+
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo-text strong span {
+            color: var(--purple);
+        }
+
+        .logo-text small {
+            display: block;
+
+            font-size: 9px;
+            letter-spacing: 3px;
+
+            color: #999;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+
+            margin-left: 100px;
+        }
+
+        nav a {
+            position: relative;
+
+            padding: 38px 0 32px;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--purple-light);
+        }
+
+        nav a.active::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 23px;
+
+            height: 2px;
+
+            background: var(--purple);
+
+            box-shadow:
+                0 0 8px var(--purple),
+                0 0 15px var(--purple);
+        }
+
+
+        /* =========================
+           HEADER AÇÕES
+        ========================= */
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .search {
+            font-size: 28px;
+            transform: rotate(-15deg);
+        }
+
+        .user-btn {
+            padding: 14px 24px;
+
+            border: 1px solid var(--purple);
+            border-radius: 10px;
+
+            font-weight: 700;
+            text-transform: uppercase;
+
+            box-shadow:
+                0 0 10px rgba(139, 32, 255, .5),
+                inset 0 0 10px rgba(139, 32, 255, .08);
+        }
+
+        .user-btn:hover {
+            background: rgba(139, 32, 255, .1);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 290px;
+
+            position: relative;
+            overflow: hidden;
+
+            padding: 34px 32px;
+
+            border: 1px solid #21498f;
+            border-radius: 28px;
+
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(116, 24, 255, .28),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    110deg,
+                    #071020 0%,
+                    #050b19 60%,
+                    #090d28 100%
+                );
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+            height: 250px;
+
+            right: 110px;
+            top: 25px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    ellipse,
+                    rgba(134, 35, 255, .35),
+                    transparent 65%
+                );
+
+            filter: blur(20px);
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+
+            max-width: 650px;
+        }
+
+        .breadcrumb {
+            color: var(--purple);
+
+            font-size: 16px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 6vw, 70px);
+
+            line-height: .9;
+
+            text-transform: uppercase;
+
+            font-weight: 700;
+
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--purple);
+        }
+
+        .hero p {
+            margin-top: 22px;
+
+            color: #d4dbec;
+
+            font-size: 17px;
+
+            line-height: 1.45;
+        }
+
+
+        /* =========================
+           CONTROLE REMOTO DECORATIVO
+        ========================= */
+
+        .controller {
+            position: absolute;
+
+            right: 80px;
+            bottom: -35px;
+
+            width: 430px;
+            height: 220px;
+
+            transform: rotate(-8deg);
+
+            opacity: .95;
+
+            filter:
+                drop-shadow(0 0 15px rgba(126, 31, 255, .75));
+        }
+
+        .controller-body {
+            width: 100%;
+            height: 150px;
+
+            position: absolute;
+            bottom: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111633,
+                    #060917
+                );
+
+            border: 3px solid #7220d9;
+
+            border-radius:
+                80px 80px
+                65px 65px;
+
+            box-shadow:
+                inset 0 0 35px rgba(128, 35, 255, .2);
+        }
+
+        .controller-body::before,
+        .controller-body::after {
+            content: "";
+
+            position: absolute;
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            background: #090d1d;
+
+            border: 2px solid #7624dc;
+
+            bottom: 28px;
+
+            box-shadow:
+                0 0 12px rgba(127, 30, 255, .5);
+        }
+
+        .controller-body::before {
+            left: 85px;
+        }
+
+        .controller-body::after {
+            right: 85px;
+        }
+
+        .controller-touch {
+            position: absolute;
+
+            width: 130px;
+            height: 62px;
+
+            left: 150px;
+            top: 30px;
+
+            border: 2px solid #2d3c6b;
+
+            border-radius: 20px;
+        }
+
+        .controller-btns {
+            position: absolute;
+
+            right: 42px;
+            top: 45px;
+
+            width: 55px;
+            height: 55px;
+        }
+
+        .controller-btns i {
+            position: absolute;
+
+            width: 17px;
+            height: 17px;
+
+            border-radius: 50%;
+
+            background: #171c3c;
+
+            border: 1px solid #9a35ff;
+        }
+
+        .controller-btns i:nth-child(1) {
+            left: 19px;
+            top: 0;
+        }
+
+        .controller-btns i:nth-child(2) {
+            left: 38px;
+            top: 19px;
+        }
+
+        .controller-btns i:nth-child(3) {
+            left: 19px;
+            top: 38px;
+        }
+
+        .controller-btns i:nth-child(4) {
+            left: 0;
+            top: 19px;
+        }
+
+
+        /* =========================
+           CONTEÚDO PRINCIPAL
+        ========================= */
+
+        .main-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.7fr 1fr;
+
+            gap: 22px;
+
+            margin-top: 24px;
+        }
+
+        .panel {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(6, 16, 33, .98),
+                    rgba(3, 9, 20, .98)
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 28px 30px;
+        }
+
+        .form-panel {
+            border-color: var(--purple);
+        }
+
+
+        /* =========================
+           TÍTULOS
+        ========================= */
+
+        .panel-title {
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .icon {
+            color: var(--purple);
+
+            font-size: 30px;
+
+            filter:
+                drop-shadow(
+                    0 0 7px
+                    rgba(145, 32, 255, .7)
+                );
+        }
+
+        .panel-subtitle {
+            color: var(--muted);
+
+            margin-left: 44px;
+            margin-top: 7px;
+            margin-bottom: 24px;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           FORMULÁRIO
+        ========================= */
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 14px 15px;
+
+            background: #071126;
+
+            color: white;
+
+            border: 1px solid #31518b;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            transition: .2s;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #65718b;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--purple);
+
+            box-shadow:
+                0 0 0 2px
+                rgba(139, 32, 255, .12);
+        }
+
+        textarea {
+            height: 120px;
+
+            resize: vertical;
+        }
+
+        .submit {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #6720ff,
+                    #9120ff
+                );
+
+            box-shadow:
+                0 0 18px
+                rgba(126, 25, 255, .45);
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .submit:hover {
+            transform: translateY(-1px);
+
+            filter: brightness(1.12);
+        }
+
+
+        /* =========================
+           OUTROS CANAIS
+        ========================= */
+
+        .contact-list {
+            display: grid;
+
+            gap: 13px;
+
+            margin-top: 22px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 16px;
+
+            background:
+                rgba(7, 18, 38, .7);
+
+            border: 1px solid #223a68;
+
+            border-radius: 10px;
+        }
+
+        .contact-item:hover {
+            border-color: var(--purple);
+        }
+
+        .contact-icon {
+            width: 58px;
+            height: 58px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(93, 21, 174, .18);
+
+            color: var(--purple);
+
+            font-size: 28px;
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(121, 26, 255, .1);
+        }
+
+        .contact-item h3 {
+            font-size: 17px;
+
+            margin-bottom: 2px;
+        }
+
+        .contact-item a {
+            color: var(--purple);
+
+            font-size: 16px;
+
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            color: #adb7ce;
+
+            font-size: 14px;
+
+            margin-top: 2px;
+        }
+
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq {
+            margin-top: 24px;
+
+            padding: 25px 30px 30px;
+        }
+
+        .faq-header {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+        }
+
+        .faq-header a {
+            color: var(--purple);
+
+            font-weight: 700;
+        }
+
+        .faq-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .faq-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 16px;
+
+            border: 1px solid #223a68;
+
+            border-radius: 10px;
+
+            background:
+                rgba(7, 18, 38, .7);
+        }
+
+        .faq-card:hover {
+            border-color: var(--purple);
+        }
+
+        .faq-icon {
+            width: 50px;
+            height: 50px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(92, 22, 170, .18);
+
+            color: var(--purple);
+
+            font-size: 23px;
+        }
+
+        .faq-card h3 {
+            font-size: 15px;
+        }
+
+        .faq-card p {
+            color: #9faac0;
+
+            font-size: 13px;
+
+            margin-top: 2px;
+        }
+
+
+        /* =========================
+           DISCORD
+        ========================= */
+
+        .discord {
+            min-height: 150px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            margin: 18px 0 40px;
+
+            padding: 30px 35px;
+
+            border: 1px solid #21498f;
+
+            border-radius: 12px;
+
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(112, 28, 255, .3),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    90deg,
+                    #071126,
+                    #0a102b
+                );
+        }
+
+        .discord h2 {
+            font-size: 26px;
+        }
+
+        .discord p {
+            color: #b4bfd3;
+
+            margin-top: 6px;
+        }
+
+        .discord-btn {
+            padding: 13px 23px;
+
+            border: 1px solid var(--purple);
+
+            border-radius: 9px;
+
+            color: var(--purple);
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            box-shadow:
+                0 0 15px
+                rgba(139, 32, 255, .35);
+        }
+
+        .discord-btn:hover {
+            background:
+                rgba(139, 32, 255, .1);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding-bottom: 30px;
+
+            text-align: center;
+
+            color: #69748d;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                margin-left: 0;
+
+                gap: 15px;
+            }
+
+            .header-actions {
+                gap: 12px;
+            }
+
+            .user-btn {
+                padding: 11px 15px;
+            }
+
+            .controller {
+                right: -90px;
+
+                opacity: .35;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .container {
+                width:
+                    calc(100% - 24px);
+            }
+
+            header {
+                height: auto;
+
+                padding: 20px 0;
+
+                flex-wrap: wrap;
+
+                gap: 18px;
+            }
+
+            nav {
+                order: 3;
+
+                width: 100%;
+
+                justify-content:
+                    space-between;
+            }
+
+            nav a {
+                padding:
+                    8px 0 14px;
+
+                font-size: 13px;
+            }
+
+            nav a.active::after {
+                bottom: 5px;
+            }
+
+            .search {
+                display: none;
+            }
+
+            .hero {
+                padding: 25px 20px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+            .panel {
+                padding:
+                    22px 18px;
+            }
+
+            .discord {
+                flex-direction: column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .discord-btn {
+                width: 100%;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =========================
+             HEADER
+        ========================= -->
+
+        <header>
+
+            <a href="#" class="logo">
+
+                <div class="logo-mark"></div>
+
+                <div class="logo-text">
+
+                    <strong>
+                        GAME<span>ZONE</span>
+                    </strong>
+
+                    <small>
+                        SEU UNIVERSO GAMER
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <nav>
+
+                <a href="#">
+                    Jogos
+                </a>
+
+                <a href="#">
+                    Notícias
+                </a>
+
+                <a href="#">
+                    Comunidade
+                </a>
+
+                <a href="#" class="active">
+                    Sobre
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <span class="search">
+                    ⌕
+                </span>
+
+                <a href="#" class="user-btn">
+                    ♙ &nbsp; Usuário
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <div class="breadcrumb">
+                    Início · Contato
+                </div>
+
+                <h1>
+                    Fale com a
+                    <br>
+
+                    <span>
+                        Gamezone.
+                    </span>
+                </h1>
+
+                <p>
+                    Tem alguma dúvida, sugestão ou quer fazer uma parceria?
+                    <br>
+
+                    Estamos aqui para ouvir você.
+                    Nossa equipe responde o mais rápido possível.
+                </p>
+
+            </div>
+
+
+            <!-- Controle decorativo -->
+
+            <div class="controller">
+
+                <div class="controller-body">
+
+                    <div class="controller-touch"></div>
+
+                    <div class="controller-btns">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================= -->
+
+        <main class="main-grid">
+
+
+            <!-- FORMULÁRIO -->
+
+            <section class="panel form-panel">
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ✉
+                    </span>
+
+                    Envie uma mensagem
+
+                </div>
+
+
+                <p class="panel-subtitle">
+
+                    Preencha o formulário abaixo e
+                    nossa equipe retornará em breve.
+
+                </p>
+
+
+                <form id="contactForm">
+
+
+                    <div class="form-row">
+
+
+                        <div class="field">
+
+                            <label for="name">
+                                Nome completo *
+                            </label>
+
+                            <input
+                                id="name"
+                                type="text"
+                                placeholder="Seu nome"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="email">
+                                E-mail *
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="seu@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="subject">
+                            Assunto *
+                        </label>
+
+                        <select
+                            id="subject"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione um assunto
+                            </option>
+
+                            <option>
+                                Dúvida
+                            </option>
+
+                            <option>
+                                Sugestão
+                            </option>
+
+                            <option>
+                                Suporte
+                            </option>
+
+                            <option>
+                                Parceria
+                            </option>
+
+                            <option>
+                                Publicidade
+                            </option>
+
+                            <option>
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="message">
+                            Mensagem *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Digite sua mensagem aqui..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        class="submit"
+                        type="submit"
+                    >
+
+                        ➤ &nbsp;
+                        Enviar mensagem
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- OUTROS CANAIS -->
+
+            <aside class="panel">
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ◯
+                    </span>
+
+                    Outros canais
+
+                </div>
+
+
+                <div class="contact-list">
+
+
+                    <!-- E-MAIL -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                E-mail
+                            </h3>
+
+                            <a href="mailto:contato@gamezone.com.br">
+                                contato@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Respondemos em até 24 horas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DISCORD -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Discord
+                            </h3>
+
+                            <a href="#">
+                                Entre no nosso servidor
+                            </a>
+
+                            <p>
+                                Converse com a comunidade.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PARCERIAS -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ⚑
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Parcerias e mídia
+                            </h3>
+
+                            <a href="mailto:parcerias@gamezone.com.br">
+                                parcerias@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Colaborações e oportunidades.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUPORTE -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ♧
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Suporte
+                            </h3>
+
+                            <a href="mailto:suporte@gamezone.com.br">
+                                suporte@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Dúvidas e problemas na plataforma.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </aside>
+
+        </main>
+
+
+
+        <!-- =========================
+             FAQ
+        ========================= -->
+
+        <section class="panel faq">
+
+
+            <div class="faq-header">
+
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ?
+                    </span>
+
+                    Dúvidas frequentes
+
+                </div>
+
+
+                <a href="#">
+                    Ver todas as perguntas →
+                </a>
+
+
+            </div>
+
+
+
+            <div class="faq-grid">
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        🎮
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Problemas na conta
+                        </h3>
+
+                        <p>
+                            Como recuperar meu acesso?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        ▣
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pagamentos e assinaturas
+                        </h3>
+
+                        <p>
+                            Dúvidas sobre compras e planos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        ♙
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Comunidade e moderação
+                        </h3>
+
+                        <p>
+                            Como denunciar um usuário?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DISCORD
+        ========================= -->
+
+        <section class="discord">
+
+
+            <div>
+
+                <h2>
+                    Faça parte da nossa comunidade
+                </h2>
+
+                <p>
+                    Troque ideias, encontre novos jogadores
+                    e fique por dentro das novidades.
+                </p>
+
+            </div>
+
+
+            <a href="#" class="discord-btn">
+
+                ◉ &nbsp;
+                Entrar no Discord
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================= -->
+
+        <footer>
+
+            © 2026 GameZone — Seu universo gamer.
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const form =
+            document.getElementById("contactForm");
+
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Mensagem enviada com sucesso! Em breve entraremos em contato."
+                );
+
+                form.reset();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1112 @@
+/* =====================================================
+   GAMEZONE - PÁGINA DE CONTATO
+   ===================================================== */
+
+
+/* =====================================================
+   VARIÁVEIS
+   ===================================================== */
+
+:root {
+    --bg: #000000;
+    --card: #050d1c;
+    --card-2: #071226;
+
+    --purple: #8b20ff;
+    --purple-light: #a94cff;
+    --purple-dark: #6415c9;
+
+    --blue: #173b80;
+    --blue-light: #31518b;
+
+    --border: #243c70;
+
+    --text: #f5f5ff;
+    --muted: #aeb8ce;
+
+    --glow:
+        0 0 10px rgba(139, 32, 255, 0.5),
+        0 0 20px rgba(139, 32, 255, 0.2);
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(76, 20, 150, 0.12),
+            transparent 35%
+        ),
+        #000;
+
+    color: var(--text);
+
+    font-family: "Rajdhani", sans-serif;
+
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1220px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-mark {
+    width: 43px;
+    height: 43px;
+
+    border: 4px solid var(--purple);
+
+    clip-path: polygon(
+        25% 5%,
+        100% 25%,
+        100% 75%,
+        25% 95%,
+        0 50%
+    );
+
+    filter:
+        drop-shadow(0 0 8px var(--purple));
+}
+
+.logo-text strong {
+    display: block;
+
+    font-size: 28px;
+    line-height: 0.85;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.logo-text strong span {
+    color: var(--purple);
+}
+
+.logo-text small {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #999;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   MENU
+   ===================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+
+    margin-left: 100px;
+}
+
+nav a {
+    position: relative;
+
+    padding: 38px 0 32px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--purple-light);
+}
+
+nav a.active {
+    color: #fff;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 23px;
+
+    height: 2px;
+
+    background: var(--purple);
+
+    box-shadow:
+        0 0 8px var(--purple),
+        0 0 15px var(--purple);
+}
+
+
+/* =====================================================
+   AÇÕES DO HEADER
+   ===================================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.search {
+    font-size: 28px;
+
+    transform: rotate(-15deg);
+
+    cursor: pointer;
+}
+
+.user-btn {
+    padding: 14px 24px;
+
+    border: 1px solid var(--purple);
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    box-shadow: var(--glow);
+
+    transition: 0.2s;
+}
+
+.user-btn:hover {
+    background: rgba(139, 32, 255, 0.1);
+
+    box-shadow:
+        0 0 15px rgba(139, 32, 255, 0.7),
+        inset 0 0 15px rgba(139, 32, 255, 0.1);
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    min-height: 290px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 34px 32px;
+
+    border: 1px solid #21498f;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(116, 24, 255, 0.28),
+            transparent 30%
+        ),
+        linear-gradient(
+            110deg,
+            #071020 0%,
+            #050b19 60%,
+            #090d28 100%
+        );
+
+    box-shadow:
+        inset 0 0 60px rgba(26, 66, 150, 0.08);
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 250px;
+
+    right: 110px;
+    top: 25px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(134, 35, 255, 0.35),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+}
+
+.hero-copy {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    color: var(--purple);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 70px);
+
+    line-height: 0.9;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+
+/* TEXTO */
+
+.hero p {
+    margin-top: 22px;
+
+    color: #d4dbec;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+}
+
+
+/* =====================================================
+   CONTROLE DECORATIVO
+   ===================================================== */
+
+.controller {
+    position: absolute;
+
+    right: 80px;
+    bottom: -35px;
+
+    width: 430px;
+    height: 220px;
+
+    transform: rotate(-8deg);
+
+    opacity: 0.95;
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(126, 31, 255, 0.75)
+        );
+}
+
+.controller-body {
+    width: 100%;
+    height: 150px;
+
+    position: absolute;
+
+    bottom: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111633,
+            #060917
+        );
+
+    border: 3px solid #7220d9;
+
+    border-radius:
+        80px 80px
+        65px 65px;
+
+    box-shadow:
+        inset 0 0 35px rgba(128, 35, 255, 0.2);
+}
+
+.controller-body::before,
+.controller-body::after {
+    content: "";
+
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #090d1d;
+
+    border: 2px solid #7624dc;
+
+    bottom: 28px;
+
+    box-shadow:
+        0 0 12px rgba(127, 30, 255, 0.5);
+}
+
+.controller-body::before {
+    left: 85px;
+}
+
+.controller-body::after {
+    right: 85px;
+}
+
+.controller-touch {
+    position: absolute;
+
+    width: 130px;
+    height: 62px;
+
+    left: 150px;
+    top: 30px;
+
+    border: 2px solid #2d3c6b;
+
+    border-radius: 20px;
+}
+
+.controller-btns {
+    position: absolute;
+
+    right: 42px;
+    top: 45px;
+
+    width: 55px;
+    height: 55px;
+}
+
+.controller-btns i {
+    position: absolute;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: #171c3c;
+
+    border: 1px solid #9a35ff;
+}
+
+.controller-btns i:nth-child(1) {
+    left: 19px;
+    top: 0;
+}
+
+.controller-btns i:nth-child(2) {
+    left: 38px;
+    top: 19px;
+}
+
+.controller-btns i:nth-child(3) {
+    left: 19px;
+    top: 38px;
+}
+
+.controller-btns i:nth-child(4) {
+    left: 0;
+    top: 19px;
+}
+
+
+/* =====================================================
+   GRID PRINCIPAL
+   ===================================================== */
+
+.main-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr 1fr;
+
+    gap: 22px;
+
+    margin-top: 24px;
+}
+
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+.panel {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(6, 16, 33, 0.98),
+            rgba(3, 9, 20, 0.98)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 28px 30px;
+}
+
+.form-panel {
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 12px rgba(139, 32, 255, 0.08);
+}
+
+
+/* =====================================================
+   TÍTULOS DOS CARDS
+   ===================================================== */
+
+.panel-title {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.icon {
+    color: var(--purple);
+
+    font-size: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 7px
+            rgba(145, 32, 255, 0.7)
+        );
+}
+
+.panel-subtitle {
+    color: var(--muted);
+
+    margin-left: 44px;
+
+    margin-top: 7px;
+
+    margin-bottom: 24px;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+   ===================================================== */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #071126;
+
+    color: #fff;
+
+    border: 1px solid #31518b;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #65718b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(139, 32, 255, 0.12),
+
+        0 0 10px
+        rgba(139, 32, 255, 0.15);
+}
+
+textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* BOTÃO */
+
+.submit {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6720ff,
+            #9120ff
+        );
+
+    box-shadow:
+        0 0 18px
+        rgba(126, 25, 255, 0.45);
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.submit:hover {
+    transform: translateY(-1px);
+
+    filter: brightness(1.12);
+
+    box-shadow:
+        0 0 25px
+        rgba(139, 32, 255, 0.65);
+}
+
+
+/* =====================================================
+   OUTROS CANAIS
+   ===================================================== */
+
+.contact-list {
+    display: grid;
+
+    gap: 13px;
+
+    margin-top: 22px;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    background:
+        rgba(7, 18, 38, 0.7);
+
+    border: 1px solid #223a68;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.contact-item:hover {
+    border-color: var(--purple);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px
+        rgba(139, 32, 255, 0.1);
+}
+
+.contact-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(93, 21, 174, 0.18);
+
+    color: var(--purple);
+
+    font-size: 28px;
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(121, 26, 255, 0.1);
+}
+
+.contact-item h3 {
+    font-size: 17px;
+
+    margin-bottom: 2px;
+}
+
+.contact-item a {
+    color: var(--purple);
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.contact-item a:hover {
+    color: var(--purple-light);
+}
+
+.contact-item p {
+    color: #adb7ce;
+
+    font-size: 14px;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+
+.faq {
+    margin-top: 24px;
+
+    padding:
+        25px 30px 30px;
+}
+
+.faq-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.faq-header a {
+    color: var(--purple);
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.faq-header a:hover {
+    color: var(--purple-light);
+}
+
+.faq-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.faq-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 1px solid #223a68;
+
+    border-radius: 10px;
+
+    background:
+        rgba(7, 18, 38, 0.7);
+
+    transition: 0.2s;
+}
+
+.faq-card:hover {
+    border-color: var(--purple);
+
+    transform: translateY(-2px);
+}
+
+.faq-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(92, 22, 170, 0.18);
+
+    color: var(--purple);
+
+    font-size: 23px;
+}
+
+.faq-card h3 {
+    font-size: 15px;
+}
+
+.faq-card p {
+    color: #9faac0;
+
+    font-size: 13px;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   DISCORD
+   ===================================================== */
+
+.discord {
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin: 18px 0 40px;
+
+    padding: 30px 35px;
+
+    border: 1px solid #21498f;
+
+    border-radius: 12px;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(112, 28, 255, 0.3),
+            transparent 30%
+        ),
+        linear-gradient(
+            90deg,
+            #071126,
+            #0a102b
+        );
+}
+
+.discord h2 {
+    font-size: 26px;
+}
+
+.discord p {
+    color: #b4bfd3;
+
+    margin-top: 6px;
+}
+
+.discord-btn {
+    padding: 13px 23px;
+
+    border: 1px solid var(--purple);
+
+    border-radius: 9px;
+
+    color: var(--purple);
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 15px
+        rgba(139, 32, 255, 0.35);
+
+    transition: 0.2s;
+}
+
+.discord-btn:hover {
+    background:
+        rgba(139, 32, 255, 0.1);
+
+    box-shadow:
+        0 0 20px
+        rgba(139, 32, 255, 0.55);
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    color: #69748d;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+        margin-left: 0;
+
+        gap: 15px;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .user-btn {
+        padding: 11px 15px;
+    }
+
+    .controller {
+        right: -90px;
+
+        opacity: 0.35;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .container {
+        width:
+            calc(100% - 24px);
+    }
+
+    header {
+        height: auto;
+
+        padding: 20px 0;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content:
+            space-between;
+    }
+
+    nav a {
+        padding:
+            8px 0 14px;
+
+        font-size: 13px;
+    }
+
+    nav a.active::after {
+        bottom: 5px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .controller {
+        display: none;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .panel {
+        padding:
+            22px 18px;
+    }
+
+    .panel-title {
+        font-size: 21px;
+    }
+
+    .panel-subtitle {
+        margin-left: 0;
+    }
+
+    .faq-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .discord {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px 20px;
+    }
+
+    .discord-btn {
+        width: 100%;
+
+        text-align: center;
+    }
+}
