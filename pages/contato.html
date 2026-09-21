@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | GameZone</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+        <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <!--importando o Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Fim importacao Bootstrap-->
+
+    
+    <!-- Importando Font google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- fim importacao google fonts-->
+
+
+
+    <link rel="stylesheet" href="../css/contato.css">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+       <!-- =========================
+             HEADER
+        ========================= -->
+
+        <!-- Inicio Menu Header-->
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../img/index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="./jogos.html" class="nav-link">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./noticias.html" class="nav-link">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./comunidade.html" class="nav-link">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contato.html" class="nav-link active">sobre</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="./usuario.html" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
+                        Usuário</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Fim Menu Header-->
+    
+    <div class="container">
+
+
+       <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <div class="breadcrumb">
+                    Início · Contato
+                </div>
+
+                <h1>
+                    Fale com a
+                    <br>
+
+                    <span>
+                        Gamezone.
+                    </span>
+                </h1>
+
+                <p>
+                    Tem alguma dúvida, sugestão ou quer fazer uma parceria?
+                    <br>
+
+                    Estamos aqui para ouvir você.
+                    Nossa equipe responde o mais rápido possível.
+                </p>
+
+            </div>
+
+
+            <!-- Controle decorativo -->
+
+            <div class="controller">
+
+                <div class="controller-body">
+
+                    <div class="controller-touch"></div>
+
+                    <div class="controller-btns">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================= -->
+
+        <main class="main-grid">
+
+
+            <!-- FORMULÁRIO -->
+
+            <section class="panel form-panel">
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ✉
+                    </span>
+
+                    Envie uma mensagem
+
+                </div>
+
+
+                <p class="panel-subtitle">
+
+                    Preencha o formulário abaixo e
+                    nossa equipe retornará em breve.
+
+                </p>
+
+
+                <form id="contactForm">
+
+
+                    <div class="form-row">
+
+
+                        <div class="field">
+
+                            <label for="name">
+                                Nome completo *
+                            </label>
+
+                            <input
+                                id="name"
+                                type="text"
+                                placeholder="Seu nome"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="email">
+                                E-mail *
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="seu@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="subject">
+                            Assunto *
+                        </label>
+
+                        <select
+                            id="subject"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione um assunto
+                            </option>
+
+                            <option>
+                                Dúvida
+                            </option>
+
+                            <option>
+                                Sugestão
+                            </option>
+
+                            <option>
+                                Suporte
+                            </option>
+
+                            <option>
+                                Parceria
+                            </option>
+
+                            <option>
+                                Publicidade
+                            </option>
+
+                            <option>
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="message">
+                            Mensagem *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Digite sua mensagem aqui..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        class="submit"
+                        type="submit"
+                    >
+
+                        ➤ &nbsp;
+                        Enviar mensagem
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+
+
+            <!-- OUTROS CANAIS -->
+
+            <aside class="panel">
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ◯
+                    </span>
+
+                    Outros canais
+
+                </div>
+
+
+                <div class="contact-list">
+
+
+                    <!-- E-MAIL -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                E-mail
+                            </h3>
+
+                            <a href="mailto:contato@gamezone.com.br">
+                                contato@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Respondemos em até 24 horas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DISCORD -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Discord
+                            </h3>
+
+                            <a href="#">
+                                Entre no nosso servidor
+                            </a>
+
+                            <p>
+                                Converse com a comunidade.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PARCERIAS -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ⚑
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Parcerias e mídia
+                            </h3>
+
+                            <a href="mailto:parcerias@gamezone.com.br">
+                                parcerias@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Colaborações e oportunidades.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUPORTE -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ♧
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Suporte
+                            </h3>
+
+                            <a href="mailto:suporte@gamezone.com.br">
+                                suporte@gamezone.com.br
+                            </a>
+
+                            <p>
+                                Dúvidas e problemas na plataforma.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </aside>
+
+        </main>
+
+
+
+        <!-- =========================
+             FAQ
+        ========================= -->
+
+        <section class="panel faq">
+
+
+            <div class="faq-header">
+
+
+                <div class="panel-title">
+
+                    <span class="icon">
+                        ?
+                    </span>
+
+                    Dúvidas frequentes
+
+                </div>
+
+
+                <a href="#">
+                    Ver todas as perguntas →
+                </a>
+
+
+            </div>
+
+
+
+            <div class="faq-grid">
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        🎮
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Problemas na conta
+                        </h3>
+
+                        <p>
+                            Como recuperar meu acesso?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        ▣
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pagamentos e assinaturas
+                        </h3>
+
+                        <p>
+                            Dúvidas sobre compras e planos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-card">
+
+                    <div class="faq-icon">
+                        ♙
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Comunidade e moderação
+                        </h3>
+
+                        <p>
+                            Como denunciar um usuário?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DISCORD
+        ========================= -->
+
+        <section class="discord">
+
+
+            <div>
+
+                <h2>
+                    Faça parte da nossa comunidade
+                </h2>
+
+                <p>
+                    Troque ideias, encontre novos jogadores
+                    e fique por dentro das novidades.
+                </p>
+
+            </div>
+
+
+            <a href="#" class="discord-btn">
+
+                ◉ &nbsp;
+                Entrar no Discord
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================= -->
+
+        <footer>
+
+            © 2026 GameZone — Seu universo gamer.
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const form =
+            document.getElementById("contactForm");
+
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Mensagem enviada com sucesso! Em breve entraremos em contato."
+                );
+
+                form.reset();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+</html>
