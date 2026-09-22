@@ -29,9 +29,14 @@
 
 <body>
 
+     <!-- Inicio Menu Header-->
     <!-- Importando Jquery-->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
 
     <header class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -44,21 +49,21 @@
             <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="../pages/jogos.html" class="nav-link">Jogos</a>
+                        <a href="./jogos.html" class="nav-link">Jogos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/noticias.html" class="nav-link">Notícias</a>
+                        <a href="./noticias.html" class="nav-link">Notícias</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/comunidade.html" class="nav-link">Comunidade</a>
+                        <a href="./comunidade.html" class="nav-link">Comunidade</a>
                     </li>
                     <li class="nav-item">
-                        <a href="../pages/sobre.html" class="nav-link">sobre</a>
+                        <a href="./contato.html" class="nav-link">sobre</a>
                     </li>
                 </ul>
                 <div class="d-flex">
-                    <a href="../pages/pesquisa.html" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
-                    <a href="../pages/usuario.html" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
+                    <a href="#" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="./usuario.html" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
                         Usuário</a>
                 </div>
             </div>
@@ -66,6 +71,8 @@
         </div>
 
     </header>
+
+    <!-- Fim Menu Header-->
 
 <section class="hero">
 
@@ -396,7 +403,8 @@
     </div>
 
 </main>
-<footer>
+<!--Inicio Footer-->
+    <footer>
         <div class="col-lg-2 col-md-12 foot-spc">
             <img src="../img/logo.png" alt="">
             <p>Conectando Jogadores.</p>
@@ -414,26 +422,27 @@
             <p>
             <a href="../pages/jogos.html">Jogos</a><br>
             <a href="../pages/noticias.html">Notícias</a><br>
-            <a href="../pages/comunidade.html">comundade</a><br>
-            <a href="../pages/sobre.html">sobre</a>
+            <a href="../pages/comunidade.html">Comundade</a><br>
+            <a href="../pages/contato.html">Sobre</a>
             </p>
         </div>
         <div class="col-lg-2 col-md-12 foot-spc">
-            <h4>Suporte</h4>
-            <p>FAQ</p>
-            <p>Central de Ajuda</p>
-            <p>contato</p>
-            <p>termos de uso</p>
-            <p>políticas de Privacidade</p>
+            <p>
+            <a href="../pages/reviews.html">Reviews</a><br>
+            <a href="../pages/proximos_lancamentos.html">Próximos Lançamentos</a><br>
+            <a href="../pages/loja.html">Loja</a><br>
+            <!--<a href="../pages/sobre.html">sobre</a>-->
+            </p>
         </div>
         <div class="col-lg-2 col-md-12 foot-spc">
             <h4>Fique por dentro</h4>
             <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
             <form action="">
                 <input type="email" name="email" id="email">
-                <button id="send"><img src="img/send.png" /></button>
+                <button id="send"><img src="../img/send.png" /></button>
             </form>
         </div>
     </footer>
+    <!-- Fim footer-->
 </body>
 </html>

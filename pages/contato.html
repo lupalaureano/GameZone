@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
 
 
 
-        <!-- Importando Jquery-->
+    <!-- Importando Jquery-->
     <script src="https://code.jquery.com/jquery-4.0.0.js"
         integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 
@@ -29,7 +30,7 @@
 
     <!-- Fim importacao Bootstrap-->
 
-    
+
     <!-- Importando Font google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,11 +47,11 @@
 
 <body>
 
-       <!-- =========================
+    <!-- =========================
              HEADER
         ========================= -->
 
-        <!-- Inicio Menu Header-->
+    <!-- Inicio Menu Header-->
     <!-- Importando Jquery-->
     <script src="https://code.jquery.com/jquery-4.0.0.js"
         integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
@@ -61,7 +62,7 @@
 
     <header class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a href="../img/index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
+            <a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -94,11 +95,11 @@
     </header>
 
     <!-- Fim Menu Header-->
-    
+
     <div class="container">
 
 
-       <!-- =========================
+        <!-- =========================
              HERO
         ========================= -->
 
@@ -197,12 +198,7 @@
                                 Nome completo *
                             </label>
 
-                            <input
-                                id="name"
-                                type="text"
-                                placeholder="Seu nome"
-                                required
-                            >
+                            <input id="name" type="text" placeholder="Seu nome" required>
 
                         </div>
 
@@ -213,12 +209,7 @@
                                 E-mail *
                             </label>
 
-                            <input
-                                id="email"
-                                type="email"
-                                placeholder="seu@email.com"
-                                required
-                            >
+                            <input id="email_contato" type="email" placeholder="seu@email.com" required>
 
                         </div>
 
@@ -233,10 +224,7 @@
                             Assunto *
                         </label>
 
-                        <select
-                            id="subject"
-                            required
-                        >
+                        <select id="subject" required>
 
                             <option value="">
                                 Selecione um assunto
@@ -278,20 +266,13 @@
                             Mensagem *
                         </label>
 
-                        <textarea
-                            id="message"
-                            placeholder="Digite sua mensagem aqui..."
-                            required
-                        ></textarea>
+                        <textarea id="message" placeholder="Digite sua mensagem aqui..." required></textarea>
 
                     </div>
 
 
 
-                    <button
-                        class="submit"
-                        type="submit"
-                    >
+                    <button class="submit" type="submit">
 
                         ➤ &nbsp;
                         Enviar mensagem
@@ -577,20 +558,52 @@
 
         </section>
 
-
-
-        <!-- =========================
-             FOOTER
-        ========================= -->
-
-        <footer>
-
-            © 2026 GameZone — Seu universo gamer.
-
-        </footer>
-
-
     </div>
+
+    <!--Inicio Footer-->
+    <footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="../img/logo.png" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="../img/discord.png" alt="" class="img">
+                <img src="../img/instagram.png" alt="" class="img">
+                <img src="../img/twitter.png" alt="" class="img">
+                <img src="../img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>
+                <a href="../pages/jogos.html">Jogos</a><br>
+                <a href="../pages/noticias.html">Notícias</a><br>
+                <a href="../pages/comunidade.html">Comundade</a><br>
+                <a href="../pages/contato.html">Sobre</a>
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <p>
+                <a href="../pages/reviews.html">Reviews</a><br>
+                <a href="../pages/proximos_lancamentos.html">Próximos Lançamentos</a><br>
+                <a href="../pages/loja.html">Loja</a><br>
+                <!--<a href="../pages/sobre.html">sobre</a>-->
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="../img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
+    <!-- Fim footer-->
+
+
+
 
 
 
@@ -606,7 +619,7 @@
 
         form.addEventListener(
             "submit",
-            function(event) {
+            function (event) {
 
                 event.preventDefault();
 
@@ -623,4 +636,5 @@
 
 
 </body>
+
 </html>

@@ -505,6 +505,8 @@ footer img {
     box-shadow: 0 0 10px 1px #7c2bf5;
     border: none;
     width: 80%;
+    border-radius: 0;
+    padding: 3px;
 }
 
 #send {
