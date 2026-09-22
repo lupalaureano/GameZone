@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gamerzone - Reviews de Jogos</title>
+
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+        <!--importando o Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+        <!-- Importando Font google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+
+         <!-- Importando o CSS da pagina -->
+
+    <link href="../css/reviews.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Importando Jquery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../pages/jogos.html" class="nav-link">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/noticias.html" class="nav-link">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/comunidade.html" class="nav-link">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/sobre.html" class="nav-link">sobre</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="../pages/pesquisa.html" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="../pages/usuario.html" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
+                        Usuário</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+<section class="hero">
+
+    <div class="hero-box">
+
+        <div class="hero-text">
+
+            <span class="tag">ÚLTIMA REVIEW</span>
+
+            <h1>Baldur's Gate 3</h1>
+
+            <p>
+                Uma aventura de RPG excepcional, com escolhas que realmente importam,
+                personagens marcantes e uma liberdade impressionante para explorar
+                e construir sua própria história.
+            </p>
+</div>
+
+    </div>
+
+</section>
+
+
+<main>
+
+    <div class="section-title">
+
+        <h2>Últimas Reviews</h2>
+
+        <input
+            type="text"
+            class="search"
+            placeholder="🔎 Procurar jogo..."
+            id="search"
+        >
+
+    </div>
+
+
+    <div class="games" id="games">
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png"
+                alt="capa do jogo Red Dead Redemption 2"
+            >
+            <div class="game-info">
+                <h3>Red Dead Redemption 2</h3>
+                <div class="platform">PC • PlayStation • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.5</span>
+                </div>
+                <p class="review">Uma jornada memorável pelo Velho Oeste, com um mundo aberto detalhado, personagens marcantes e uma narrativa emocionante.</p>
+                <div class="review-date">Review publicada em 20/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://thumb.wikimedia.org/wikipedia/pt/thumb/a/a5/God_of_War_Ragnar%C3%B6k_capa.jpg/330px-God_of_War_Ragnar%C3%B6k_capa.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                alt="Capa do jogo God of War Ragnarök"
+            >
+            <div class="game-info">
+                <h3> God of War Ragnarök</h3>
+                <div class="platform">PC • PlayStation</div>
+                <div class="rating">
+                    <span class="score">9.2</span>
+                </div>
+                <p class="review"> Uma aventura cinematográfica incrível que combina combates brutais, exploração e uma história emocionante sobre família e destino..</p>
+                <div class="review-date">Review publicada em 19/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://store-images.s-microsoft.com/image/apps.52001.67759939744253232.91d27dff-a27e-44ea-9d15-3d3fc6acfd00.841c08cf-c100-4be3-abee-b444a2304b90"
+                alt="Capa do jogo Outlast"
+            >
+            <div class="game-info">
+                <h3>Outlast</h3>
+                <div class="platform">PlayStation • PC • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.5</span>
+                </div>
+                <p class="review">Um jogo de terror intenso e assustador, com uma atmosfera pesada, perseguições tensas e uma história cheia de mistérios. Você nunca se sente seguro, e cada canto pode esconder um novo perigo. Simplesmente um dos melhores jogos para quem gosta de horror.</p>
+                <div class="review-date">Review publicada em 17/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202211/1412/5YlA3POEEpaAJsUq3eg6U8d6.png"
+                alt="Capa do jogo The Witcher 3 Wild Hunt"
+            >
+            <div class="game-info">
+                <h3>The Witcher 3 Wild Hunt</h3>
+                <div class="platform">PC • PlayStation • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.8</span>
+                </div>
+                <p class="review">Uma excelente aventura de fantasia, com um mundo rico, missões envolventes e personagens que tornam cada jornada especial.</p>
+                <div class="review-date">Review publicada em 15/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202008/0416/6Bo40lnWU0BhgrOUm7Cb6by3.png"
+                alt="Capa do jogo Cyberpunk 2077"
+            >
+            <div class="game-info">
+                <h3>Cyberpunk 2077</h3>
+                <div class="platform">PC • PlayStation • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.9</span>
+                </div>
+                <p class="review">Um RPG futurista impressionante, com uma cidade vibrante, personagens marcantes e uma história cheia de escolhas e consequências.</p>
+                <div class="review-date">Review publicada em 09/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://upload.wikimedia.org/wikipedia/pt/9/96/The_Last_of_Us_2_capa.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"
+                alt="Capa do jogo The Last of Us Part II"
+            >
+            <div class="game-info">
+                <h3>The Last of Us Part II</h3>
+                <div class="platform">PlayStation • PC</div>
+                <div class="rating">
+                    <span class="score">9.3</span>
+                </div>
+                <p class="review">Uma narrativa intensa sobre sobrevivência e consequências, acompanhada por uma apresentação técnica de alto nível.</p>
+                <div class="review-date">Review publicada em 07/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://zeldacentral.com/wp-content/uploads/2025/03/Tears-of-the-Kingdom-wallpaper.jpg"
+                alt="Capa do jogo The Legend of Zelda: Tears of the Kingdom"
+            >
+            <div class="game-info">
+                <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                <div class="platform">Nintendo Switch</div>
+                <div class="rating">
+                    <span class="score">9.3</span>
+                </div>
+                <p class="review">Um mundo gigantesco, repleto de segredos, desafios e possibilidades, onde a liberdade para explorar, descobrir novos caminhos e evoluir faz cada jornada parecer única.</p>
+                <div class="review-date">Review publicada em 05/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202207/2509/85p2Dwh5iDhUzRKe40QeNYh3.png"
+                alt="Capa do jogo Resident Evil 4"
+            >
+            <div class="game-info">
+                <h3>Resident Evil 4</h3>
+                <div class="platform">PC • PlayStation • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.4</span>
+                </div>
+                <p class="review">Uma combinação eficiente de ação, tensão e exploração, com ritmo excelente e momentos que mantêm a aventura sempre interessante.</p>
+                <div class="review-date">Review publicada em 02/09/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202505/0704/9382bbaafd616aae7c02de84f57a298b5e2cfa87d030a0d1.jpg"
+                alt="Capa do jogo Silent Hill"
+            >
+            <div class="game-info">
+                <h3>Silent Hill</h3>
+                <div class="platform">PC • PlayStation</div>
+                <div class="rating">
+                    <span class="score">9.4</span>
+                </div>
+                <p class="review">Uma cidade sombria e perturbadora, repleta de mistérios, criaturas assustadoras e uma atmosfera sufocante, onde cada passo revela novos segredos e aumenta a sensação de medo e tensão.</p>
+                <div class="review-date">Review publicada em 31/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg"
+                alt="Capa do jogo Marvels Spider-Man 2"
+            >
+            <div class="game-info">
+                <h3>Marvels Spider-Man 2</h3>
+                <div class="platform">Pc • PlayStation</div>
+                <div class="rating">
+                    <span class="score">9.9</span>
+                </div>
+                <p class="review">Uma aventura de super-heróis dinâmica, com movimentação excelente, combates divertidos e uma campanha cheia de ação.</p>
+                <div class="review-date">Review publicada em 28/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlKWcKlff_-ORSFgnKp9FFkHzKlkh8yPt_TTklgWAKDA&s"
+                alt="Capa do jogo EAFC27"
+            >
+            <div class="game-info">
+                <h3>EAFC27</h3>
+                <div class="platform">PlayStation • PC • Xbox • Nintendo Switch</div>
+                <div class="rating">
+                    <span class="score">8.7</span>
+                </div>
+                <p class="review">Um jogo de futebol completo e divertido, com partidas intensas, muitos modos de jogo e bastante conteúdo para quem gosta de competir. A jogabilidade é fluida e as partidas podem render boas horas de diversão, principalmente com amigos. Porém, alguns problemas e aspectos repetitivos acabam tirando um pouco da experiência</p>
+                <div class="review-date">Review publicada em 25/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://upload.wikimedia.org/wikipedia/pt/4/46/Grand_Theft_Auto_VI.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"
+                alt="Capa do jogo GTA 6"
+            >
+            <div class="game-info">
+                <h3>GTA 6</h3>
+                <div class="platform">PlayStation • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.3</span>
+                </div>
+                <p class="review">Um mundo aberto gigantesco, cheio de personagens, atividades e possibilidades, com uma cidade viva e cheia de detalhes. A combinação de ação, exploração e uma história envolvente promete uma experiência marcante para quem gosta de jogos de mundo aberto.</p>
+                <div class="review-date">Review publicada em 23/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202601/1616/9e09677388a2f815ab02fe08cc918d945b822d4041a55023.png"
+                alt="Capa do jogo Forza Horizon 6"
+            >
+            <div class="game-info">
+                <h3>Forza Horizon 6</h3>
+                <div class="platform">PC • Xbox</div>
+                <div class="rating">
+                    <span class="score">9.9</span>
+                </div>
+                <p class="review">Um enorme mundo aberto cheio de carros, corridas e paisagens incríveis, oferecendo muita liberdade para explorar, competir e personalizar seus veículos. Uma experiência divertida e viciante para quem gosta de velocidade, desafios e de simplesmente sair dirigindo pelo mapa.</p>
+                <div class="review-date">Review publicada em 21/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202210/3121/Xz6kd2CORZxe8JnfNJwvA35A.png"
+                alt="Capa do jogo Need for Speed"
+            >
+            <div class="game-info">
+                <h3>Need for Speed</h3>
+                <div class="platform">PlayStation • PC • Xbox</div>
+                <div class="rating">
+                    <span class="score">8.3</span>
+                </div>
+                <p class="review">Um jogo de corrida divertido e cheio de adrenalina, com carros incríveis, perseguições intensas e muita velocidade. A personalização dos veículos e as corridas deixam a experiência ainda mais divertida, apesar de alguns problemas e controles difícies.</p>
+                <div class="review-date">Review publicada em 19/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://assets.2k.com/1a6ngf98576c/4NTPv5tNN2anknuh9uc5Oa/fd2089c654d4508186db198c8f0b9cc2/NBA27-STANDARD-COVER_ATHLETE_RESIZING_NBA_ONLY_SENDS_ALL_MODULES-NA-STATIC-ENUS-NO_RATING-AGN-748x896-FINAL.png"
+                alt="Capa do jogo NBA2 2K27"
+            >
+            <div class="game-info">
+                <h3>NBA 2K27</h3>
+                <div class="platform">PC • PlayStation • Xbox • Switch</div>
+                <div class="rating">
+                    <span class="score">9.5</span>
+                </div>
+                <p class="review">Um jogo de basquete completo e divertido, com jogabilidade fluida, vários modos de jogo e bastante conteúdo para aproveitar. As partidas são competitivas e a evolução do jogador deixa a experiência ainda mais viciante.</p>
+                <div class="review-date">Review publicada em 17/08/2026</div>
+            </div>
+        </article>
+
+
+        <article class="game-card">
+            <img
+                class="cover"
+                src="https://image.api.playstation.com/vulcan/ap/rnd/202303/3115/2352d53245b00ead9ef068a504600ca3a8652f0545a1b562.jpg"
+                alt="Capa do jogo Ride 5"
+            >
+            <div class="game-info">
+                <h3>Ride 5</h3>
+                    <div class="platform">PC • PlayStation • Xbox</div>
+                    <div class="rating">
+                    <span class="score">8.5</span>
+                </div>
+                <p class="review">Um ótimo jogo de motos, com uma grande variedade de pistas e motocicletas, além de uma pilotagem divertida e desafiadora. Os gráficos são bonitos e a sensação de velocidade é muito boa. Apesar de alguns problemas e de uma progressão que pode ficar repetitiva, é uma experiência muito divertida para quem gosta de motos.</p>
+                <div class="review-date">Review publicada em 15/08/2026</div>
+            </div>
+        </article>
+    </div>
+
+</main>
+<footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="../img/logo.png" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="../img/discord.png" alt="" class="img">
+                <img src="../img/instagram.png" alt="" class="img">
+                <img src="../img/twitter.png" alt="" class="img">
+                <img src="../img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>
+            <a href="../pages/jogos.html">Jogos</a><br>
+            <a href="../pages/noticias.html">Notícias</a><br>
+            <a href="../pages/comunidade.html">comundade</a><br>
+            <a href="../pages/sobre.html">sobre</a>
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Suporte</h4>
+            <p>FAQ</p>
+            <p>Central de Ajuda</p>
+            <p>contato</p>
+            <p>termos de uso</p>
+            <p>políticas de Privacidade</p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

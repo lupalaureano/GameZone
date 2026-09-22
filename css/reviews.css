@@ -1,0 +1,342 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            color: white;
+            background-color: black !important;
+        }
+
+        header {
+            height: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            align-items: center;
+            height: auto;
+            max-width: 1160px;
+            margin: auto;
+            background-color: black;
+            padding: 0 30px;
+            background-color: black;
+        }
+        #pesquisa {
+            margin-right: 15px;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        #pesquisa img {
+            height: 18px;
+            filter: invert(100%);
+        }
+        #pesquisa:hover {
+            box-shadow: 0 0 3px 3px #6d2ce9;
+        }
+        .menu {
+            /*display: flex;justify-content: space-between;
+            width: 35%;
+            height: 70px;
+            align-items: center;*/ 
+            justify-content: space-around;
+        }
+        .navbar-toggler {
+            box-shadow: 0 0 3px 3px #6d2ce9;
+        }
+        .menu a {
+            height: 100%;
+            align-content: center;
+            padding: 15px;
+        }
+        .menu a:hover {
+            box-shadow: inset 0 -1px 0 0 #6d2ce9;
+        }
+        #usuario {
+            border: 2px solid #7c2bf5;
+            border-radius: 10px;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 10px 1px #7c2bf5;
+            text-align: center;
+            font-size: 14px;
+        }
+        #userimg {
+            height: 14px;
+            filter: invert(100%) drop-shadow(0px 0px 2px #7c2bf5);
+            margin-right: 5px;
+        }
+        #logo {
+            height: 70px;
+        }
+        a,
+        a::after {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #6d2ce9;
+            text-decoration: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("../img/burger-bar.png");
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            background-position: center center;
+            filter: invert(100%);
+        }
+    
+        .hero {
+            max-width: 1300px;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .hero-box {
+            background:
+                linear-gradient(90deg, rgba(10,12,18,.98), rgba(10,12,18,.55)),
+                url("https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            min-height: 390px;
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 55px;
+            border: 1px solid #292d3a;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #7c5cff;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #c0c2ca;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        main {
+            max-width: 1300px;
+            margin: auto;
+            padding: 0 25px 60px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+        }
+
+        .search {
+            background: #151821;
+            border: 1px solid #2a2e3a;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            outline: none;
+            width: 250px;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .game-card {
+            background: #13161e;
+            border: 1px solid #252936;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: .25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+            border-color: #7c5cff;
+        }
+
+        .cover {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 18px;
+        }
+
+        .game-info h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .platform {
+            color: #888e9d;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .score {
+            background: #7c5cff;
+            padding: 6px 9px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .review {
+            color: #b9bdc8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .review-date {
+            color: #777d8b;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        footer {
+            border-top: 1px solid #252936;
+            padding: 30px;
+            text-align: center;
+            color: #707582;
+            background: #0e1016;
+        }
+
+        @media (max-width: 1000px) {
+            .games {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero-box {
+                padding: 30px;
+                min-height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            .games {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+    display: flex;
+    background-color: #020913;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.col-md-12.foot-spc {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px
+}
+
+footer p {
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+footer img {
+    max-width: 250px;
+}
+
+#social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.img {
+    height: 20px;
+    filter: invert(100%);
+}
+
+#email {
+    margin-top: 20px;
+    background-color: #020913;
+    box-shadow: 0 0 10px 1px #7c2bf5;
+    border: none;
+    width: 80%;
+}
+
+#send {
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 0 0 30px 0px #7c2bf5;
+    vertical-align: middle;
+
+}
+
+#send img {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+    
