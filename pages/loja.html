@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameZone | Lojas Físicas Parceiras</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Tektur:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="../css/lojaf.css" />
 </head>
 <body>
-    <h1>Lojas</h1>
+
+  <!-- NAVBAR -->
+  <header class="navbar-gz">
+    <div class="logo-gz">
+      <i class="bi bi-hexagon-fill"></i>
+      <div>
+        <span class="logo-title">GAME<span class="accent">ZONE</span></span>
+        <span class="logo-sub">SEU UNIVERSO GAMER</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">JOGOS</a>
+      <a href="#">NOTÍCIAS</a>
+      <a href="#">COMUNIDADE</a>
+      <a href="loja.html" class="active">LOJAS</a>
+      <a href="#">SOBRE</a>
+    </nav>
+
+    <div class="nav-actions">
+      <i class="bi bi-search"></i>
+      <button class="btn-usuario"><i class="bi bi-person-fill"></i> USUÁRIO</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-loja">
+    <h1>Lojas <span class="accent">Parceiras</span></h1>
+    <p>Encontre lojas físicas oficiais da GameZone espalhadas pelo Sudeste do Brasil.</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="filtros-loja">
+    <p class="filtro-label">Filtrar por estado</p>
+    <div class="filtro-btns">
+      <button type="button" class="filtro-btn active" data-estado="todos">Todos</button>
+      <button type="button" class="filtro-btn" data-estado="SP">São Paulo</button>
+      <button type="button" class="filtro-btn" data-estado="RJ">Rio de Janeiro</button>
+      <button type="button" class="filtro-btn" data-estado="MG">Minas Gerais</button>
+    </div>
+  </section>
+
+  <!-- GRID DE LOJAS -->
+  <section class="grid-lojas" id="gridLojas">
+
+    <!-- SP -->
+    <div class="card-loja" data-estado="SP">
+      <div class="card-img" style="background-image: url('../img/lojas/gamehub-sp.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameHub SP</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Paulista, 1000 — São Paulo/SP</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 20h</p>
+        <span class="tag-estado">SP</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="SP">
+      <div class="card-img" style="background-image: url('../img/lojas/levelup-sp.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>LevelUp Games</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua Augusta, 500 — São Paulo/SP</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 11h às 21h</p>
+        <span class="tag-estado">SP</span>
+      </div>
+    </div>
+
+    <!-- RJ -->
+    <div class="card-loja" data-estado="RJ">
+      <div class="card-img" style="background-image: url('../img/lojas/gamezone-rj.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameZone Store RJ</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Rio Branco, 200 — Rio de Janeiro/RJ</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 19h</p>
+        <span class="tag-estado">RJ</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="RJ">
+      <div class="card-img" style="background-image: url('../img/lojas/arena-rj.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>Arena Games RJ</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua Barata Ribeiro, 300 — Rio de Janeiro/RJ</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 20h</p>
+        <span class="tag-estado">RJ</span>
+      </div>
+    </div>
+
+    <!-- MG -->
+    <div class="card-loja" data-estado="MG">
+      <div class="card-img" style="background-image: url('../img/lojas/pixel-mg.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>Pixel Store MG</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Afonso Pena, 700 — Belo Horizonte/MG</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 19h</p>
+        <span class="tag-estado">MG</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="MG">
+      <div class="card-img" style="background-image: url('../img/lojas/gamecore-mg.png');">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameCore MG</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua da Bahia, 450 — Belo Horizonte/MG</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 11h às 20h</p>
+        <span class="tag-estado">MG</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MENSAGEM SEM RESULTADOS (controlada via JS) -->
+  <p id="semResultados" class="sem-resultados" style="display:none;">
+    Nenhuma loja encontrada para esse estado.
+  </p>
+
+  <footer class="footer-gz">
+    <p>&copy; 2026 GameZone — Projeto acadêmico. Todas as lojas e imagens são fictícias, criadas para fins didáticos.</p>
+  </footer>
+
+  <script src="../js/loja.js" defer></script>
 </body>
 </html>

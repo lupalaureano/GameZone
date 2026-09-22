@@ -1,0 +1,312 @@
+/* ===== VARIÁVEIS DE COR (paleta GameZone) ===== */
+:root {
+  --bg-preto: #0a0a12;
+  --bg-card: #14141f;
+  --roxo-neon: #7c2bf5;
+  --roxo-claro: #a855f7;
+  --ciano: #00e5ff;
+  --rosa-neon: #ff2bd6;
+  --texto-claro: #f2f2f7;
+  --texto-cinza: #9a9aab;
+  --borda: #2a2a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-preto);
+  color: var(--texto-claro);
+  font-family: "Rajdhani", sans-serif;
+}
+
+.accent {
+  color: var(--roxo-neon);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-gz {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background-color: #0a0a12;
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo-gz {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-gz i {
+  font-size: 28px;
+  color: var(--roxo-neon);
+}
+
+.logo-title {
+  display: block;
+  font-family: "Tektur", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--texto-claro);
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--texto-cinza);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--roxo-neon);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-actions i {
+  font-size: 18px;
+  color: var(--texto-claro);
+  cursor: pointer;
+}
+
+.btn-usuario {
+  background: transparent;
+  border: 1px solid var(--roxo-neon);
+  color: var(--texto-claro);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-usuario:hover {
+  background: var(--roxo-neon);
+  box-shadow: 0 0 14px var(--roxo-neon);
+}
+
+/* ===== HERO ===== */
+.hero-loja {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero-loja h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.hero-loja p {
+  color: var(--texto-cinza);
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* ===== FILTROS ===== */
+.filtros-loja {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filtro-label {
+  color: var(--texto-cinza);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.filtro-btns {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background: transparent;
+  border: 1px solid var(--borda);
+  color: var(--texto-claro);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtro-btn:hover {
+  border-color: var(--roxo-neon);
+  color: var(--roxo-neon);
+}
+
+.filtro-btn.active {
+  background: var(--roxo-neon);
+  border-color: var(--roxo-neon);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(124, 43, 245, 0.6);
+}
+
+/* ===== GRID DE LOJAS ===== */
+.grid-lojas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+.card-loja {
+  background: var(--bg-card);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-loja:hover {
+  transform: translateY(-6px);
+  border-color: var(--roxo-neon);
+  box-shadow: 0 8px 24px rgba(124, 43, 245, 0.25);
+}
+
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.badge-parceiro {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(10, 10, 18, 0.85);
+  border: 1px solid var(--roxo-neon);
+  color: var(--roxo-claro);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(4px);
+}
+
+.card-body {
+  padding: 18px 20px 22px;
+  position: relative;
+}
+
+.card-body h3 {
+  font-family: "Tektur", sans-serif;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.card-endereco,
+.card-horario {
+  font-size: 13.5px;
+  color: var(--texto-cinza);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.card-endereco i,
+.card-horario i {
+  color: var(--roxo-neon);
+  font-size: 13px;
+}
+
+.tag-estado {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: rgba(124, 43, 245, 0.15);
+  color: var(--roxo-claro);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* ===== SEM RESULTADOS ===== */
+.sem-resultados {
+  text-align: center;
+  color: var(--texto-cinza);
+  padding: 40px 0 80px;
+  font-size: 15px;
+}
+
+/* ===== FOOTER ===== */
+.footer-gz {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-cinza);
+  font-size: 12px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .grid-lojas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-gz {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .grid-lojas {
+    grid-template-columns: 1fr;
+    padding: 0 20px 50px;
+  }
+  .hero-loja h1 {
+    font-size: 34px;
+  }
+}
