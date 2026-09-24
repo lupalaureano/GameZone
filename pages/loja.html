@@ -115,10 +115,10 @@
   <section class="filtros-loja">
     <p class="filtro-label">Filtrar por estado</p>
     <div class="filtro-btns">
-      <button type="button" class="filtro-btn active" data-estado="todos">Todos</button>
-      <button type="button" class="filtro-btn" data-estado="SP">São Paulo</button>
-      <button type="button" class="filtro-btn" data-estado="RJ">Rio de Janeiro</button>
-      <button type="button" class="filtro-btn" data-estado="MG">Minas Gerais</button>
+      <button type="button" class="filtro-btn chip active" data-estado="Todos">Todos</button>
+      <button type="button" class="filtro-btn chip" data-estado="SP">São Paulo</button>
+      <button type="button" class="filtro-btn chip" data-estado="RJ">Rio de Janeiro</button>
+      <button type="button" class="filtro-btn chip" data-estado="MG">Minas Gerais</button>
     </div>
   </section>
 
@@ -127,7 +127,7 @@
 
     <!-- SP -->
     <div class="card-loja" data-estado="SP">
-      <div class="card-img" style="background-image: url('../img/lojas/gamehub-sp.png');">
+      <div class="card-img">
         <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
       </div>
       <div class="card-body">
@@ -139,7 +139,7 @@
     </div>
 
     <div class="card-loja" data-estado="SP">
-      <div class="card-img" style="background-image: url('../img/lojas/levelup-sp.png');">
+      <div class="card-img" >
         <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
       </div>
       <div class="card-body">
@@ -152,7 +152,7 @@
 
     <!-- RJ -->
     <div class="card-loja" data-estado="RJ">
-      <div class="card-img" style="background-image: url('../img/lojas/gamezone-rj.png');">
+      <div class="card-img" >
         <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
       </div>
       <div class="card-body">
@@ -164,7 +164,7 @@
     </div>
 
     <div class="card-loja" data-estado="RJ">
-      <div class="card-img" style="background-image: url('../img/lojas/arena-rj.png');">
+      <div class="card-img" >
         <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
       </div>
       <div class="card-body">
@@ -249,6 +249,36 @@
     </footer>
     <!-- Fim footer-->
 
-  <script src="../js/loja.js" defer></script>
+  <!--script src="../js/loja.js" defer></script-->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+                
+      document.querySelectorAll('.chip').forEach(chip => {
+        
+        chip.addEventListener('click', () => {
+
+
+        
+          document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          const estado = chip.dataset.estado;
+          console.log(estado);
+          document.querySelectorAll('.card-loja').forEach(card => {
+            if (estado === 'Todos' || card.dataset.estado === estado) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+        
+
+      })
+
+    
+    
+</script>
 </body>
 </html>
